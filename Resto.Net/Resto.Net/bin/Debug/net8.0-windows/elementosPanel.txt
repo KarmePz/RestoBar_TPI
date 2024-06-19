@@ -1,0 +1,5 @@
+Label,Mesa chica,437,562,82,20,-65281
+Button,Mesa Mediana,506,127,116,30,-65281
+Button,Mesa Mediana,1,475,116,30,-65281
+Label,Mesa chica,10,15,98,25,-65281
+Label,Mesa chica,10,15,98,25,-65281
