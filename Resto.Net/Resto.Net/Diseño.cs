@@ -22,16 +22,19 @@ namespace Resto.Net
             InitializeComponent();
             this.inicio = (InicioForm)InicioForm.ActiveForm;
 
+            //Permite que en el panel se puedan mover objetos 
             panelDiseñoLayout.DragDrop += panelDiseñoLayout_DragDrop;
             panelDiseñoLayout.DragEnter += panelDiseñoLayout_DragEnter;
             CargarEtiquetas();
 
 
+            //ASIGNACION DE EVENTOS PARA CADA MESA Y SILLA
             foreach (Control control in panelDiseñoLayout.Controls)
             {
                 control.MouseDown += Elemento_MouseDown;
                 control.MouseMove += Elemento_MouseMove;
                 control.MouseUp += Elemento_MouseUp;
+
             }
         }
 
@@ -46,18 +49,17 @@ namespace Resto.Net
         //Generamos un Label de Mesa chica
         private void mesaChicaButton_Click(object sender, EventArgs e)
         {
-            Label mesaChica = new Label();
-            mesaChica.Text = "Mesa chica";
-            mesaChica.Visible = true;
-            mesaChica.Location = new Point(10, 15);
-            mesaChica.AutoSize = true;
-            mesaChica.BackColor = Color.Magenta;
+            Panel mesaChicaPanel = new Panel();
+            mesaChicaPanel.Size = new Size(100, 100);
+            mesaChicaPanel.Visible = true;
+            mesaChicaPanel.Location = new Point(100, 150);
+            mesaChicaPanel.BackColor = Color.Magenta;
 
-            mesaChica.MouseDown += Elemento_MouseDown;
-            mesaChica.MouseMove += Elemento_MouseMove;
-            mesaChica.MouseUp += Elemento_MouseUp;
+            mesaChicaPanel.MouseDown += Elemento_MouseDown;
+            mesaChicaPanel.MouseMove += Elemento_MouseMove;
+            mesaChicaPanel.MouseUp += Elemento_MouseUp;
 
-            panelDiseñoLayout.Controls.Add(mesaChica);
+            panelDiseñoLayout.Controls.Add(mesaChicaPanel);
 
         }
         //Generamos un Button de Mesa mediana
@@ -67,7 +69,7 @@ namespace Resto.Net
             Button mesaMediana = new Button();
             mesaMediana.Text = "Mesa Mediana";
             mesaMediana.Visible = true;
-            mesaMediana.Location = new Point(10, 15);
+            mesaMediana.Location = new Point(100, 100);
             mesaMediana.AutoSize = true;
             mesaMediana.BackColor = Color.Magenta;
 
@@ -84,30 +86,97 @@ namespace Resto.Net
         {
             if (e.Button == MouseButtons.Left)
             {
-                arrastrando = true;
-                offset = e.Location;
+                Control control = sender as Control;
+                if (control != null)
+                {
+                    arrastrando = true;
+                    offset = e.Location;
+                }
             }
+            else if (e.Button == MouseButtons.Right)
+            {
+                Control control = sender as Control;
+                if (control != null)
+                {
+                    panelDiseñoLayout.Controls.Remove(control);
+                    control.Dispose(); // Liberar recursos del control eliminado
+                }
+            }
+            //if (e.Button == MouseButtons.Left)
+            //{
+            //    Control control = sender as Control;
+            //    if (control != null)
+            //    {
+            //        // Código para arrastrar el control si es necesario
+            //        arrastrando = true;
+            //        offset = e.Location;
+            //    }
+
+
+
+            //}
+            //else if (e.Button == MouseButtons.Right)
+            //{
+
+            //    //se utiliza para localizar el control seleccionado
+            //    Control control = panelDiseñoLayout.GetChildAtPoint(e.Location);
+            //    if (control != null)
+            //    {
+            //        panelDiseñoLayout.Controls.Remove(control);
+            //        control.Dispose();//liberar recursos
+
+            //        //MessageBox.Show("Clic derecho detectado!");
+            //        //TODO
+            //    }
+
+            //}
         }
 
 
         private void Elemento_MouseMove(object? sender, MouseEventArgs e)
         {
+            // Arrastrar el control
             if (arrastrando)
             {
                 Control control = sender as Control;
                 if (control != null)
                 {
-                    Point newLocation = new Point(control.Location.X + e.X - offset.X, control.Location.Y + e.Y - offset.Y);
-                    control.Location = newLocation;
+                    Point newLocation = panelDiseñoLayout.PointToClient(Control.MousePosition);
+                    control.Location = new Point(newLocation.X - offset.X, newLocation.Y - offset.Y);
+                    
+                    
                 }
             }
+            //if (arrastrando)
+            //{
+            //    Control control = sender as Control;
+            //    if (control != null)
+            //    {
+            //        Point newLocation = new Point(control.Location.X + e.X - offset.X, control.Location.Y + e.Y - offset.Y);
+            //        control.Location = newLocation;
+            //    }
+            //}
+
         }
         private void Elemento_MouseUp(object sender, MouseEventArgs e)
         {
+            // Liberar el control al soltar el botón izquierdo del ratón
             if (e.Button == MouseButtons.Left)
             {
-                arrastrando = false;
+                Control control = sender as Control;
+                if (control != null)
+                {
+                    arrastrando = false;
+                    
+                    
+                }
             }
+
+
+            //if (e.Button == MouseButtons.Left)
+            //{
+            //    arrastrando = false;
+            //}
         }
 
         // Guardamos los elementos del panel de diseño
@@ -147,9 +216,9 @@ namespace Resto.Net
                         Color backColor = Color.FromArgb(int.Parse(parts[6]));
 
                         Control control;
-                        if (tipo == "Label")
+                        if (tipo == "Panel")
                         {
-                            control = new Label();
+                            control = new Panel();
                         }
                         else if (tipo == "Button")
                         {
@@ -201,7 +270,10 @@ namespace Resto.Net
             this.inicio.Size = this.Size;
         }
 
-        
+        private void mesas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

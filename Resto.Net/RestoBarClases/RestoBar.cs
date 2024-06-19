@@ -14,11 +14,22 @@ namespace RestoBarClases
     public class RestoBar
     {
         public string NombreRest { get; set; }
-        //public List<UserControl> ListaControles { get; set; }
 
-        public RestoBar(string nombreRest, /*List<UserControl> listaControles*/)
+        //public List<UserControl> ListaControles { get; set; }
+        public List<Mesa> Mesas { get; set; }
+        public List<Silla> SillasIndividuales { get; set; }
+        public List<Mozo> mozos { get; set; }
+
+        public List<IEstructura> estructuras { get; set; }
+
+
+
+
+
+
+        public RestoBar(string nombreRest /*List<UserControl> listaControles*/)
         {
-            NombreRest = nombreRest;
+            this.NombreRest = nombreRest;
             //ListaControles = listaControles;
         }
     }

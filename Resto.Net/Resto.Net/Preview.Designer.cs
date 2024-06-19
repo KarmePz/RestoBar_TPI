@@ -39,10 +39,12 @@
             // 
             panelDiseñoLayout.AllowDrop = true;
             panelDiseñoLayout.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelDiseñoLayout.AutoScroll = true;
             panelDiseñoLayout.BackColor = SystemColors.InactiveCaption;
             panelDiseñoLayout.Location = new Point(0, 0);
+            panelDiseñoLayout.Margin = new Padding(4, 4, 4, 4);
             panelDiseñoLayout.Name = "panelDiseñoLayout";
-            panelDiseñoLayout.Size = new Size(611, 455);
+            panelDiseñoLayout.Size = new Size(764, 569);
             panelDiseñoLayout.TabIndex = 4;
             // 
             // PanelDeHerramientas
@@ -51,9 +53,10 @@
             PanelDeHerramientas.BackColor = Color.FromArgb(54, 61, 74);
             PanelDeHerramientas.Controls.Add(Salir);
             PanelDeHerramientas.Controls.Add(labelResto);
-            PanelDeHerramientas.Location = new Point(611, 0);
+            PanelDeHerramientas.Location = new Point(764, 0);
+            PanelDeHerramientas.Margin = new Padding(4, 4, 4, 4);
             PanelDeHerramientas.Name = "PanelDeHerramientas";
-            PanelDeHerramientas.Size = new Size(245, 455);
+            PanelDeHerramientas.Size = new Size(306, 569);
             PanelDeHerramientas.TabIndex = 3;
             // 
             // Salir
@@ -64,10 +67,10 @@
             Salir.FlatStyle = FlatStyle.Flat;
             Salir.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
             Salir.ForeColor = SystemColors.Control;
-            Salir.Location = new Point(0, 398);
-            Salir.Margin = new Padding(3, 4, 3, 4);
+            Salir.Location = new Point(0, 498);
+            Salir.Margin = new Padding(4, 5, 4, 5);
             Salir.Name = "Salir";
-            Salir.Size = new Size(242, 30);
+            Salir.Size = new Size(302, 38);
             Salir.TabIndex = 0;
             Salir.Text = "Salir";
             Salir.UseVisualStyleBackColor = false;
@@ -79,21 +82,22 @@
             labelResto.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelResto.ForeColor = SystemColors.Control;
             labelResto.Location = new Point(0, 0);
+            labelResto.Margin = new Padding(4, 0, 4, 0);
             labelResto.Name = "labelResto";
-            labelResto.Size = new Size(245, 35);
+            labelResto.Size = new Size(306, 44);
             labelResto.TabIndex = 2;
             labelResto.Text = "Resto .NET";
             labelResto.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Preview
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(859, 462);
+            ClientSize = new Size(1074, 578);
             Controls.Add(PanelDeHerramientas);
             Controls.Add(panelDiseñoLayout);
-            Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(877, 509);
+            Margin = new Padding(4, 5, 4, 5);
+            MinimumSize = new Size(1091, 622);
             Name = "Preview";
             Text = "Previuw";
             FormClosing += Preview_FormClosing;

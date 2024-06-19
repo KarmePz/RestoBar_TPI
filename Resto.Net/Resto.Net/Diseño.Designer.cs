@@ -59,10 +59,10 @@
             Salir.FlatStyle = FlatStyle.Flat;
             Salir.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             Salir.ForeColor = SystemColors.Control;
-            Salir.Location = new Point(0, 392);
-            Salir.Margin = new Padding(3, 4, 3, 4);
+            Salir.Location = new Point(0, 490);
+            Salir.Margin = new Padding(4, 5, 4, 5);
             Salir.Name = "Salir";
-            Salir.Size = new Size(245, 30);
+            Salir.Size = new Size(306, 38);
             Salir.TabIndex = 0;
             Salir.Text = "Volver";
             Salir.UseVisualStyleBackColor = false;
@@ -77,9 +77,10 @@
             PanelDeHerramientas.Controls.Add(ElementosControl);
             PanelDeHerramientas.Controls.Add(guardarButton);
             PanelDeHerramientas.Controls.Add(Salir);
-            PanelDeHerramientas.Location = new Point(611, 0);
+            PanelDeHerramientas.Location = new Point(764, 0);
+            PanelDeHerramientas.Margin = new Padding(4);
             PanelDeHerramientas.Name = "PanelDeHerramientas";
-            PanelDeHerramientas.Size = new Size(245, 455);
+            PanelDeHerramientas.Size = new Size(306, 569);
             PanelDeHerramientas.TabIndex = 1;
             // 
             // Vision
@@ -89,10 +90,10 @@
             Vision.BackColor = Color.Transparent;
             Vision.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold);
             Vision.ForeColor = Color.FromArgb(113, 188, 252);
-            Vision.Location = new Point(127, 7);
+            Vision.Location = new Point(159, 9);
             Vision.Margin = new Padding(0);
             Vision.Name = "Vision";
-            Vision.Size = new Size(89, 29);
+            Vision.Size = new Size(105, 36);
             Vision.TabIndex = 5;
             Vision.Text = "Vision";
             // 
@@ -103,10 +104,10 @@
             label1.BackColor = Color.FromArgb(54, 61, 74);
             label1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(51, 7);
+            label1.Location = new Point(64, 9);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(84, 29);
+            label1.Size = new Size(98, 36);
             label1.TabIndex = 4;
             label1.Text = "Restó";
             // 
@@ -119,33 +120,38 @@
             ElementosControl.Cursor = Cursors.Hand;
             ElementosControl.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ElementosControl.ItemSize = new Size(85, 35);
-            ElementosControl.Location = new Point(3, 66);
+            ElementosControl.Location = new Point(4, 82);
+            ElementosControl.Margin = new Padding(4);
             ElementosControl.Name = "ElementosControl";
             ElementosControl.SelectedIndex = 0;
-            ElementosControl.Size = new Size(238, 184);
+            ElementosControl.Size = new Size(298, 230);
             ElementosControl.TabIndex = 1;
             // 
             // mesas
             // 
+            mesas.AutoScroll = true;
             mesas.BackColor = Color.FromArgb(54, 61, 74);
             mesas.Controls.Add(button3);
             mesas.Controls.Add(mesaMedianaButton);
             mesas.Controls.Add(mesaChicaButton);
             mesas.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             mesas.Location = new Point(4, 39);
+            mesas.Margin = new Padding(4);
             mesas.Name = "mesas";
-            mesas.Padding = new Padding(3);
-            mesas.Size = new Size(230, 141);
+            mesas.Padding = new Padding(4);
+            mesas.Size = new Size(290, 187);
             mesas.TabIndex = 0;
             mesas.Text = "Mesas";
+            mesas.Click += mesas_Click;
             // 
             // button3
             // 
             button3.Dock = DockStyle.Top;
             button3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(3, 93);
+            button3.Location = new Point(4, 116);
+            button3.Margin = new Padding(4);
             button3.Name = "button3";
-            button3.Size = new Size(224, 45);
+            button3.Size = new Size(282, 56);
             button3.TabIndex = 2;
             button3.Text = "Mesa Grande";
             button3.UseVisualStyleBackColor = true;
@@ -154,9 +160,10 @@
             // 
             mesaMedianaButton.Dock = DockStyle.Top;
             mesaMedianaButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            mesaMedianaButton.Location = new Point(3, 48);
+            mesaMedianaButton.Location = new Point(4, 60);
+            mesaMedianaButton.Margin = new Padding(4);
             mesaMedianaButton.Name = "mesaMedianaButton";
-            mesaMedianaButton.Size = new Size(224, 45);
+            mesaMedianaButton.Size = new Size(282, 56);
             mesaMedianaButton.TabIndex = 1;
             mesaMedianaButton.Text = "Mesa Mediana";
             mesaMedianaButton.UseVisualStyleBackColor = true;
@@ -167,9 +174,10 @@
             mesaChicaButton.AutoSize = true;
             mesaChicaButton.Dock = DockStyle.Top;
             mesaChicaButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            mesaChicaButton.Location = new Point(3, 3);
+            mesaChicaButton.Location = new Point(4, 4);
+            mesaChicaButton.Margin = new Padding(4);
             mesaChicaButton.Name = "mesaChicaButton";
-            mesaChicaButton.Size = new Size(224, 45);
+            mesaChicaButton.Size = new Size(282, 56);
             mesaChicaButton.TabIndex = 0;
             mesaChicaButton.Text = "Mesa Chica";
             mesaChicaButton.UseVisualStyleBackColor = true;
@@ -183,18 +191,20 @@
             sillas.Controls.Add(button6);
             sillas.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             sillas.Location = new Point(4, 39);
+            sillas.Margin = new Padding(4);
             sillas.Name = "sillas";
-            sillas.Padding = new Padding(3);
-            sillas.Size = new Size(230, 141);
+            sillas.Padding = new Padding(4);
+            sillas.Size = new Size(290, 187);
             sillas.TabIndex = 1;
             sillas.Text = "Sillas";
             // 
             // button4
             // 
             button4.Dock = DockStyle.Top;
-            button4.Location = new Point(3, 93);
+            button4.Location = new Point(4, 116);
+            button4.Margin = new Padding(4);
             button4.Name = "button4";
-            button4.Size = new Size(224, 45);
+            button4.Size = new Size(282, 56);
             button4.TabIndex = 5;
             button4.Text = "silla 3";
             button4.UseVisualStyleBackColor = true;
@@ -202,9 +212,10 @@
             // button5
             // 
             button5.Dock = DockStyle.Top;
-            button5.Location = new Point(3, 48);
+            button5.Location = new Point(4, 60);
+            button5.Margin = new Padding(4);
             button5.Name = "button5";
-            button5.Size = new Size(224, 45);
+            button5.Size = new Size(282, 56);
             button5.TabIndex = 4;
             button5.Text = "silla 2";
             button5.UseVisualStyleBackColor = true;
@@ -212,9 +223,10 @@
             // button6
             // 
             button6.Dock = DockStyle.Top;
-            button6.Location = new Point(3, 3);
+            button6.Location = new Point(4, 4);
+            button6.Margin = new Padding(4);
             button6.Name = "button6";
-            button6.Size = new Size(224, 45);
+            button6.Size = new Size(282, 56);
             button6.TabIndex = 3;
             button6.Text = "silla 1";
             button6.UseVisualStyleBackColor = true;
@@ -223,9 +235,10 @@
             // 
             estructuras.BackColor = Color.FromArgb(54, 61, 74);
             estructuras.Location = new Point(4, 39);
+            estructuras.Margin = new Padding(4);
             estructuras.Name = "estructuras";
-            estructuras.Padding = new Padding(3);
-            estructuras.Size = new Size(230, 141);
+            estructuras.Padding = new Padding(4);
+            estructuras.Size = new Size(290, 187);
             estructuras.TabIndex = 2;
             estructuras.Text = "Estructuras";
             // 
@@ -239,10 +252,10 @@
             guardarButton.FlatStyle = FlatStyle.Flat;
             guardarButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             guardarButton.ForeColor = SystemColors.Control;
-            guardarButton.Location = new Point(0, 352);
-            guardarButton.Margin = new Padding(3, 4, 3, 4);
+            guardarButton.Location = new Point(0, 434);
+            guardarButton.Margin = new Padding(4, 5, 4, 5);
             guardarButton.Name = "guardarButton";
-            guardarButton.Size = new Size(245, 32);
+            guardarButton.Size = new Size(306, 46);
             guardarButton.TabIndex = 3;
             guardarButton.Text = "Guardar";
             guardarButton.UseVisualStyleBackColor = false;
@@ -255,19 +268,20 @@
             panelDiseñoLayout.AutoScroll = true;
             panelDiseñoLayout.BackColor = SystemColors.InactiveCaption;
             panelDiseñoLayout.Location = new Point(0, 0);
+            panelDiseñoLayout.Margin = new Padding(4);
             panelDiseñoLayout.Name = "panelDiseñoLayout";
-            panelDiseñoLayout.Size = new Size(611, 455);
+            panelDiseñoLayout.Size = new Size(764, 577);
             panelDiseñoLayout.TabIndex = 2;
             // 
             // Diseño
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(859, 462);
+            ClientSize = new Size(1074, 578);
             Controls.Add(panelDiseñoLayout);
             Controls.Add(PanelDeHerramientas);
-            Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(877, 509);
+            Margin = new Padding(4, 5, 4, 5);
+            MinimumSize = new Size(1091, 622);
             Name = "Diseño";
             Text = "Diseño";
             FormClosing += Diseño_FormClosing;

@@ -56,3 +56,15 @@ C:\Users\Fabricio Armoa\Documents\tp_prog_3\RestoBar_TPI_TEST\Resto.NET\Resto.Ne
 C:\Users\Fabricio Armoa\Documents\tp_prog_3\RestoBar_TPI_TEST\Resto.NET\Resto.Net\RestoBarClases\obj\Debug\net8.0\refint\RestoBarClases.dll
 C:\Users\Fabricio Armoa\Documents\tp_prog_3\RestoBar_TPI_TEST\Resto.NET\Resto.Net\RestoBarClases\obj\Debug\net8.0\RestoBarClases.pdb
 C:\Users\Fabricio Armoa\Documents\tp_prog_3\RestoBar_TPI_TEST\Resto.NET\Resto.Net\RestoBarClases\obj\Debug\net8.0\ref\RestoBarClases.dll
+C:\Users\JulianPz\Desktop\Practicas Programacion\C#\Universidad\GUIA PROG III\Proyecto Restobar Versiones\gitHub Proyecto\RestoBar_TPI\Resto.Net\RestoBarClases\obj\Debug\net8.0\RestoBarClases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JulianPz\Desktop\Practicas Programacion\C#\Universidad\GUIA PROG III\Proyecto Restobar Versiones\gitHub Proyecto\RestoBar_TPI\Resto.Net\RestoBarClases\obj\Debug\net8.0\RestoBarClases.AssemblyInfoInputs.cache
+C:\Users\JulianPz\Desktop\Practicas Programacion\C#\Universidad\GUIA PROG III\Proyecto Restobar Versiones\gitHub Proyecto\RestoBar_TPI\Resto.Net\RestoBarClases\obj\Debug\net8.0\RestoBarClases.AssemblyInfo.cs
+C:\Users\JulianPz\Desktop\Practicas Programacion\C#\Universidad\GUIA PROG III\Proyecto Restobar Versiones\gitHub Proyecto\RestoBar_TPI\Resto.Net\RestoBarClases\obj\Debug\net8.0\RestoBarClases.csproj.CoreCompileInputs.cache
+C:\Users\JulianPz\Desktop\Practicas Programacion\C#\Universidad\GUIA PROG III\Proyecto Restobar Versiones\gitHub Proyecto\RestoBar_TPI\Resto.Net\RestoBarClases\obj\Debug\net8.0\RestoBarClases.sourcelink.json
+C:\Users\JulianPz\Desktop\Practicas Programacion\C#\Universidad\GUIA PROG III\Proyecto Restobar Versiones\gitHub Proyecto\RestoBar_TPI\Resto.Net\RestoBarClases\obj\Debug\net8.0\RestoBarClases.dll
+C:\Users\JulianPz\Desktop\Practicas Programacion\C#\Universidad\GUIA PROG III\Proyecto Restobar Versiones\gitHub Proyecto\RestoBar_TPI\Resto.Net\RestoBarClases\obj\Debug\net8.0\refint\RestoBarClases.dll
+C:\Users\JulianPz\Desktop\Practicas Programacion\C#\Universidad\GUIA PROG III\Proyecto Restobar Versiones\gitHub Proyecto\RestoBar_TPI\Resto.Net\RestoBarClases\obj\Debug\net8.0\RestoBarClases.pdb
+C:\Users\JulianPz\Desktop\Practicas Programacion\C#\Universidad\GUIA PROG III\Proyecto Restobar Versiones\gitHub Proyecto\RestoBar_TPI\Resto.Net\RestoBarClases\bin\Debug\net8.0\RestoBarClases.deps.json
+C:\Users\JulianPz\Desktop\Practicas Programacion\C#\Universidad\GUIA PROG III\Proyecto Restobar Versiones\gitHub Proyecto\RestoBar_TPI\Resto.Net\RestoBarClases\bin\Debug\net8.0\RestoBarClases.dll
+C:\Users\JulianPz\Desktop\Practicas Programacion\C#\Universidad\GUIA PROG III\Proyecto Restobar Versiones\gitHub Proyecto\RestoBar_TPI\Resto.Net\RestoBarClases\bin\Debug\net8.0\RestoBarClases.pdb
+C:\Users\JulianPz\Desktop\Practicas Programacion\C#\Universidad\GUIA PROG III\Proyecto Restobar Versiones\gitHub Proyecto\RestoBar_TPI\Resto.Net\RestoBarClases\obj\Debug\net8.0\ref\RestoBarClases.dll

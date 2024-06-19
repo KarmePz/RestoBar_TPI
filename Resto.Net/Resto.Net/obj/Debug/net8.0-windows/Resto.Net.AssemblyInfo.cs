@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Resto.Net")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33a68a9bf7dd04e9e4adab3b9894a1653c8cf6be")]
 [assembly: System.Reflection.AssemblyProductAttribute("Resto.Net")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Resto.Net")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

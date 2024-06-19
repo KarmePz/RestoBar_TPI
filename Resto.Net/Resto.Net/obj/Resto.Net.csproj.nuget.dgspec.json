@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\PROYECTO RESTOBAR\\Resto.NET\\Resto.Net\\Resto.Net\\Resto.Net.csproj": {}
+    "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\Proyecto Restobar Versiones\\gitHub Proyecto\\RestoBar_TPI\\Resto.Net\\Resto.Net\\Resto.Net.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\PROYECTO RESTOBAR\\Resto.NET\\Resto.Net\\Resto.Net\\Resto.Net.csproj": {
+    "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\Proyecto Restobar Versiones\\gitHub Proyecto\\RestoBar_TPI\\Resto.Net\\Resto.Net\\Resto.Net.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\PROYECTO RESTOBAR\\Resto.NET\\Resto.Net\\Resto.Net\\Resto.Net.csproj",
+        "projectUniqueName": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\Proyecto Restobar Versiones\\gitHub Proyecto\\RestoBar_TPI\\Resto.Net\\Resto.Net\\Resto.Net.csproj",
         "projectName": "Resto.Net",
-        "projectPath": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\PROYECTO RESTOBAR\\Resto.NET\\Resto.Net\\Resto.Net\\Resto.Net.csproj",
+        "projectPath": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\Proyecto Restobar Versiones\\gitHub Proyecto\\RestoBar_TPI\\Resto.Net\\Resto.Net\\Resto.Net.csproj",
         "packagesPath": "C:\\Users\\JulianPz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\PROYECTO RESTOBAR\\Resto.NET\\Resto.Net\\Resto.Net\\obj\\",
+        "outputPath": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\Proyecto Restobar Versiones\\gitHub Proyecto\\RestoBar_TPI\\Resto.Net\\Resto.Net\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\PROYECTO RESTOBAR\\Resto.NET\\Resto.Net\\RestoBarClases\\RestoBarClases.csproj": {
-                "projectPath": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\PROYECTO RESTOBAR\\Resto.NET\\Resto.Net\\RestoBarClases\\RestoBarClases.csproj"
+              "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\Proyecto Restobar Versiones\\gitHub Proyecto\\RestoBar_TPI\\Resto.Net\\RestoBarClases\\RestoBarClases.csproj": {
+                "projectPath": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\Proyecto Restobar Versiones\\gitHub Proyecto\\RestoBar_TPI\\Resto.Net\\RestoBarClases\\RestoBarClases.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\PROYECTO RESTOBAR\\Resto.NET\\Resto.Net\\RestoBarClases\\RestoBarClases.csproj": {
+    "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\Proyecto Restobar Versiones\\gitHub Proyecto\\RestoBar_TPI\\Resto.Net\\RestoBarClases\\RestoBarClases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\PROYECTO RESTOBAR\\Resto.NET\\Resto.Net\\RestoBarClases\\RestoBarClases.csproj",
+        "projectUniqueName": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\Proyecto Restobar Versiones\\gitHub Proyecto\\RestoBar_TPI\\Resto.Net\\RestoBarClases\\RestoBarClases.csproj",
         "projectName": "RestoBarClases",
-        "projectPath": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\PROYECTO RESTOBAR\\Resto.NET\\Resto.Net\\RestoBarClases\\RestoBarClases.csproj",
+        "projectPath": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\Proyecto Restobar Versiones\\gitHub Proyecto\\RestoBar_TPI\\Resto.Net\\RestoBarClases\\RestoBarClases.csproj",
         "packagesPath": "C:\\Users\\JulianPz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\PROYECTO RESTOBAR\\Resto.NET\\Resto.Net\\RestoBarClases\\obj\\",
+        "outputPath": "C:\\Users\\JulianPz\\Desktop\\Practicas Programacion\\C#\\Universidad\\GUIA PROG III\\Proyecto Restobar Versiones\\gitHub Proyecto\\RestoBar_TPI\\Resto.Net\\RestoBarClases\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
