@@ -9,6 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Redondo_6.png" />
+    <None Remove="Resources\test.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Redondo_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\test.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\RestoBarClases\RestoBarClases.csproj" />
   </ItemGroup>
 

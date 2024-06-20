@@ -17,6 +17,9 @@ namespace Resto.Net
         private Point lastLocation;//ultima localizacion del control
         private Point offset;
         private bool arrastrando = false;
+
+
+
         public Diseño()
         {
             InitializeComponent();
@@ -49,8 +52,17 @@ namespace Resto.Net
         //Generamos un Label de Mesa chica
         private void mesaChicaButton_Click(object sender, EventArgs e)
         {
+
             Panel mesaChicaPanel = new Panel();
-            mesaChicaPanel.Size = new Size(100, 100);
+            PictureBox pictureBox = new PictureBox();
+
+            pictureBox.Dock = DockStyle.Fill;
+            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox.Image = Image.FromFile(@"Resources\Redondo_6.png");
+            pictureBox.Enabled = false;
+
+
+            mesaChicaPanel.Size = new Size(150, 150);
             mesaChicaPanel.Visible = true;
             mesaChicaPanel.Location = new Point(100, 150);
             mesaChicaPanel.BackColor = Color.Magenta;
@@ -58,10 +70,14 @@ namespace Resto.Net
             mesaChicaPanel.MouseDown += Elemento_MouseDown;
             mesaChicaPanel.MouseMove += Elemento_MouseMove;
             mesaChicaPanel.MouseUp += Elemento_MouseUp;
+            mesaChicaPanel.Controls.Add(pictureBox);
 
             panelDiseñoLayout.Controls.Add(mesaChicaPanel);
 
+
+
         }
+
         //Generamos un Button de Mesa mediana
 
         private void mesaMedianaButton_Click(object sender, EventArgs e)
@@ -143,8 +159,8 @@ namespace Resto.Net
                 {
                     Point newLocation = panelDiseñoLayout.PointToClient(Control.MousePosition);
                     control.Location = new Point(newLocation.X - offset.X, newLocation.Y - offset.Y);
-                    
-                    
+
+
                 }
             }
             //if (arrastrando)
@@ -167,8 +183,8 @@ namespace Resto.Net
                 if (control != null)
                 {
                     arrastrando = false;
-                    
-                    
+
+
                 }
             }
 
@@ -191,7 +207,9 @@ namespace Resto.Net
             {
                 foreach (Control control in panelDiseñoLayout.Controls)
                 {
+
                     writer.WriteLine($"{control.GetType().Name},{control.Text},{control.Location.X},{control.Location.Y},{control.Width},{control.Height},{control.BackColor.ToArgb()}");
+
                 }
             }
         }
@@ -243,6 +261,25 @@ namespace Resto.Net
                 }
             }
         }
+        private void GuardarControles(Control.ControlCollection controls, StreamWriter writer)
+        {
+            foreach (Control control in controls)
+            {
+                writer.WriteLine($"{control.GetType().Name},{control.Text},{control.Location.X},{control.Location.Y},{control.Width},{control.Height},{control.BackColor.ToArgb()}");
+
+                // Si el control tiene controles anidados, guardar también esos controles
+                if (control.Controls.Count > 0)
+                {
+                    GuardarControles(control.Controls, writer);
+                }
+            }
+        }
+
+
+
+
+
+
         /*Se añadio la propiedad de auto scroll para que cuando se agrega un control que queda fuera del area visible
         *se pueda ver correctamente
         */
@@ -273,6 +310,86 @@ namespace Resto.Net
         private void mesas_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Limite_Button_Click(object sender, EventArgs e)
+        {
+            Panel LimitePanel = new Panel();
+            PictureBox pictureBox = new PictureBox();
+
+            pictureBox.Dock = DockStyle.Fill;
+            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox.Image = Image.FromFile(@"Resources\Redondo_6.png");
+            pictureBox.Enabled = false;
+
+
+            LimitePanel.Size = new Size(150, 150);
+            LimitePanel.Visible = true;
+            LimitePanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            LimitePanel.Location = new Point(100, 150);
+            LimitePanel.BackColor = Color.Magenta;
+
+
+            LimitePanel.MouseDown += panelSizeable_MouseDown;
+            LimitePanel.MouseMove += panelSizeable_MouseMove;
+
+            LimitePanel.MouseUp += panelSizeable_MouseUp;
+            LimitePanel.Controls.Add(pictureBox);
+
+            panelDiseñoLayout.Controls.Add(LimitePanel);
+
+        }
+    
+
+
+        /// <summary>
+        /// Control de cambio de tamaño del apartado limite, Todavia no se implemento el movimiento
+        /// se tiene que trabajar en ese movimiento particularmente, se agrega el nuevo proyecto de 
+        /// igual manera. Otro problema que surge del codigo siguiente es al momento de guardarlo. Aqui pierde 
+        /// sus propiedades de cambio de tamaño y solo se puede mover
+        /// </summary>
+        private bool resizing = false;
+        private Point lastMousePos;
+
+        private void panelSizeable_MouseDown(object sender, MouseEventArgs e)
+        {
+            Control panelsizeable = sender as Control;
+            
+                resizing = true;
+                lastMousePos = e.Location;
+            
+        }
+
+        private void panelSizeable_MouseMove(object sender, MouseEventArgs e)
+        {
+            Control panelSizeable = sender as Control;
+            if (resizing)
+            {
+                int deltaX = e.X - lastMousePos.X;
+                int deltaY = e.Y - lastMousePos.Y;
+
+                panelSizeable.Width += deltaX;
+                panelSizeable.Height += deltaY;
+
+                lastMousePos = e.Location;
+            }
+        }
+
+        private void panelSizeable_MouseUp(object sender, MouseEventArgs e)
+        {
+            resizing = false;
+        }
+        private bool EsquinaResizing(Point mouseLocation,Control panelResizable)
+        {
+          
+            // Definir un área de la esquina inferior derecha donde se permite el redimensionamiento
+            Rectangle resizeArea = new Rectangle(
+                panelResizable.Width - 10,
+                panelResizable.Height - 10,
+                10,
+                10);
+
+            return resizeArea.Contains(mouseLocation);
         }
     }
 }
