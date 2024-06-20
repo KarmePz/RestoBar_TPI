@@ -34,13 +34,13 @@
             label1 = new Label();
             ElementosControl = new TabControl();
             mesas = new TabPage();
-            button3 = new Button();
-            mesaMedianaButton = new Button();
-            mesaChicaButton = new Button();
+            buttonMesaRectangular = new Button();
+            mesaCuadradaButton = new Button();
+            mesaRedondaButton = new Button();
             sillas = new TabPage();
             button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
+            buttonSillaIndRed = new Button();
+            buttonSillaIndCuad = new Button();
             estructuras = new TabPage();
             guardarButton = new Button();
             panelDiseñoLayout = new Panel();
@@ -59,10 +59,9 @@
             Salir.FlatStyle = FlatStyle.Flat;
             Salir.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             Salir.ForeColor = SystemColors.Control;
-            Salir.Location = new Point(0, 490);
-            Salir.Margin = new Padding(4, 5, 4, 5);
+            Salir.Location = new Point(0, 294);
             Salir.Name = "Salir";
-            Salir.Size = new Size(306, 38);
+            Salir.Size = new Size(214, 23);
             Salir.TabIndex = 0;
             Salir.Text = "Volver";
             Salir.UseVisualStyleBackColor = false;
@@ -77,10 +76,10 @@
             PanelDeHerramientas.Controls.Add(ElementosControl);
             PanelDeHerramientas.Controls.Add(guardarButton);
             PanelDeHerramientas.Controls.Add(Salir);
-            PanelDeHerramientas.Location = new Point(764, 0);
-            PanelDeHerramientas.Margin = new Padding(4);
+            PanelDeHerramientas.Location = new Point(535, 0);
+            PanelDeHerramientas.Margin = new Padding(3, 2, 3, 2);
             PanelDeHerramientas.Name = "PanelDeHerramientas";
-            PanelDeHerramientas.Size = new Size(306, 569);
+            PanelDeHerramientas.Size = new Size(214, 341);
             PanelDeHerramientas.TabIndex = 1;
             // 
             // Vision
@@ -90,10 +89,10 @@
             Vision.BackColor = Color.Transparent;
             Vision.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold);
             Vision.ForeColor = Color.FromArgb(113, 188, 252);
-            Vision.Location = new Point(159, 9);
+            Vision.Location = new Point(111, 5);
             Vision.Margin = new Padding(0);
             Vision.Name = "Vision";
-            Vision.Size = new Size(105, 36);
+            Vision.Size = new Size(72, 25);
             Vision.TabIndex = 5;
             Vision.Text = "Vision";
             // 
@@ -104,10 +103,10 @@
             label1.BackColor = Color.FromArgb(54, 61, 74);
             label1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(64, 9);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(45, 5);
+            label1.Margin = new Padding(1, 0, 1, 0);
             label1.Name = "label1";
-            label1.Size = new Size(98, 36);
+            label1.Size = new Size(67, 25);
             label1.TabIndex = 4;
             label1.Text = "Restó";
             // 
@@ -120,125 +119,126 @@
             ElementosControl.Cursor = Cursors.Hand;
             ElementosControl.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ElementosControl.ItemSize = new Size(85, 35);
-            ElementosControl.Location = new Point(4, 82);
-            ElementosControl.Margin = new Padding(4);
+            ElementosControl.Location = new Point(3, 49);
+            ElementosControl.Margin = new Padding(3, 2, 3, 2);
             ElementosControl.Name = "ElementosControl";
             ElementosControl.SelectedIndex = 0;
-            ElementosControl.Size = new Size(298, 230);
+            ElementosControl.Size = new Size(209, 138);
             ElementosControl.TabIndex = 1;
             // 
             // mesas
             // 
             mesas.AutoScroll = true;
             mesas.BackColor = Color.FromArgb(54, 61, 74);
-            mesas.Controls.Add(button3);
-            mesas.Controls.Add(mesaMedianaButton);
-            mesas.Controls.Add(mesaChicaButton);
+            mesas.Controls.Add(buttonMesaRectangular);
+            mesas.Controls.Add(mesaCuadradaButton);
+            mesas.Controls.Add(mesaRedondaButton);
             mesas.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             mesas.Location = new Point(4, 39);
-            mesas.Margin = new Padding(4);
+            mesas.Margin = new Padding(3, 2, 3, 2);
             mesas.Name = "mesas";
-            mesas.Padding = new Padding(4);
-            mesas.Size = new Size(290, 187);
+            mesas.Padding = new Padding(3, 2, 3, 2);
+            mesas.Size = new Size(201, 95);
             mesas.TabIndex = 0;
             mesas.Text = "Mesas";
             mesas.Click += mesas_Click;
             // 
-            // button3
+            // buttonMesaRectangular
             // 
-            button3.Dock = DockStyle.Top;
-            button3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(4, 116);
-            button3.Margin = new Padding(4);
-            button3.Name = "button3";
-            button3.Size = new Size(282, 56);
-            button3.TabIndex = 2;
-            button3.Text = "Mesa Grande";
-            button3.UseVisualStyleBackColor = true;
+            buttonMesaRectangular.Dock = DockStyle.Top;
+            buttonMesaRectangular.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonMesaRectangular.Location = new Point(3, 70);
+            buttonMesaRectangular.Margin = new Padding(3, 2, 3, 2);
+            buttonMesaRectangular.Name = "buttonMesaRectangular";
+            buttonMesaRectangular.Size = new Size(178, 34);
+            buttonMesaRectangular.TabIndex = 2;
+            buttonMesaRectangular.Text = "Mesa Rectangular";
+            buttonMesaRectangular.UseVisualStyleBackColor = true;
             // 
-            // mesaMedianaButton
+            // mesaCuadradaButton
             // 
-            mesaMedianaButton.Dock = DockStyle.Top;
-            mesaMedianaButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            mesaMedianaButton.Location = new Point(4, 60);
-            mesaMedianaButton.Margin = new Padding(4);
-            mesaMedianaButton.Name = "mesaMedianaButton";
-            mesaMedianaButton.Size = new Size(282, 56);
-            mesaMedianaButton.TabIndex = 1;
-            mesaMedianaButton.Text = "Mesa Mediana";
-            mesaMedianaButton.UseVisualStyleBackColor = true;
-            mesaMedianaButton.Click += mesaMedianaButton_Click;
+            mesaCuadradaButton.Dock = DockStyle.Top;
+            mesaCuadradaButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mesaCuadradaButton.Location = new Point(3, 36);
+            mesaCuadradaButton.Margin = new Padding(3, 2, 3, 2);
+            mesaCuadradaButton.Name = "mesaCuadradaButton";
+            mesaCuadradaButton.Size = new Size(178, 34);
+            mesaCuadradaButton.TabIndex = 1;
+            mesaCuadradaButton.Text = "Mesa Cuadrada";
+            mesaCuadradaButton.UseVisualStyleBackColor = true;
+            mesaCuadradaButton.Click += mesaMedianaButton_Click;
             // 
-            // mesaChicaButton
+            // mesaRedondaButton
             // 
-            mesaChicaButton.AutoSize = true;
-            mesaChicaButton.Dock = DockStyle.Top;
-            mesaChicaButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            mesaChicaButton.Location = new Point(4, 4);
-            mesaChicaButton.Margin = new Padding(4);
-            mesaChicaButton.Name = "mesaChicaButton";
-            mesaChicaButton.Size = new Size(282, 56);
-            mesaChicaButton.TabIndex = 0;
-            mesaChicaButton.Text = "Mesa Chica";
-            mesaChicaButton.UseVisualStyleBackColor = true;
-            mesaChicaButton.Click += mesaChicaButton_Click;
+            mesaRedondaButton.AutoSize = true;
+            mesaRedondaButton.Dock = DockStyle.Top;
+            mesaRedondaButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mesaRedondaButton.Location = new Point(3, 2);
+            mesaRedondaButton.Margin = new Padding(3, 2, 3, 2);
+            mesaRedondaButton.Name = "mesaRedondaButton";
+            mesaRedondaButton.Size = new Size(178, 34);
+            mesaRedondaButton.TabIndex = 0;
+            mesaRedondaButton.Text = "Mesa Redonda";
+            mesaRedondaButton.UseVisualStyleBackColor = true;
+            mesaRedondaButton.Click += mesaChicaButton_Click;
             // 
             // sillas
             // 
             sillas.BackColor = Color.RosyBrown;
             sillas.Controls.Add(button4);
-            sillas.Controls.Add(button5);
-            sillas.Controls.Add(button6);
+            sillas.Controls.Add(buttonSillaIndRed);
+            sillas.Controls.Add(buttonSillaIndCuad);
             sillas.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             sillas.Location = new Point(4, 39);
-            sillas.Margin = new Padding(4);
+            sillas.Margin = new Padding(3, 2, 3, 2);
             sillas.Name = "sillas";
-            sillas.Padding = new Padding(4);
-            sillas.Size = new Size(290, 187);
+            sillas.Padding = new Padding(3, 2, 3, 2);
+            sillas.Size = new Size(201, 95);
             sillas.TabIndex = 1;
             sillas.Text = "Sillas";
             // 
             // button4
             // 
             button4.Dock = DockStyle.Top;
-            button4.Location = new Point(4, 116);
-            button4.Margin = new Padding(4);
+            button4.Location = new Point(3, 70);
+            button4.Margin = new Padding(3, 2, 3, 2);
             button4.Name = "button4";
-            button4.Size = new Size(282, 56);
+            button4.Size = new Size(195, 34);
             button4.TabIndex = 5;
             button4.Text = "silla 3";
             button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // buttonSillaIndRed
             // 
-            button5.Dock = DockStyle.Top;
-            button5.Location = new Point(4, 60);
-            button5.Margin = new Padding(4);
-            button5.Name = "button5";
-            button5.Size = new Size(282, 56);
-            button5.TabIndex = 4;
-            button5.Text = "silla 2";
-            button5.UseVisualStyleBackColor = true;
+            buttonSillaIndRed.Dock = DockStyle.Top;
+            buttonSillaIndRed.Location = new Point(3, 36);
+            buttonSillaIndRed.Margin = new Padding(3, 2, 3, 2);
+            buttonSillaIndRed.Name = "buttonSillaIndRed";
+            buttonSillaIndRed.Size = new Size(195, 34);
+            buttonSillaIndRed.TabIndex = 4;
+            buttonSillaIndRed.Text = "Silla Ind. Redonda";
+            buttonSillaIndRed.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // buttonSillaIndCuad
             // 
-            button6.Dock = DockStyle.Top;
-            button6.Location = new Point(4, 4);
-            button6.Margin = new Padding(4);
-            button6.Name = "button6";
-            button6.Size = new Size(282, 56);
-            button6.TabIndex = 3;
-            button6.Text = "silla 1";
-            button6.UseVisualStyleBackColor = true;
+            buttonSillaIndCuad.Dock = DockStyle.Top;
+            buttonSillaIndCuad.Location = new Point(3, 2);
+            buttonSillaIndCuad.Margin = new Padding(3, 2, 3, 2);
+            buttonSillaIndCuad.Name = "buttonSillaIndCuad";
+            buttonSillaIndCuad.Size = new Size(195, 34);
+            buttonSillaIndCuad.TabIndex = 3;
+            buttonSillaIndCuad.Text = "Silla Ind. Cuadrada";
+            buttonSillaIndCuad.UseVisualStyleBackColor = true;
+            buttonSillaIndCuad.Click += buttonSillaIndCuad_Click;
             // 
             // estructuras
             // 
             estructuras.BackColor = Color.FromArgb(54, 61, 74);
             estructuras.Location = new Point(4, 39);
-            estructuras.Margin = new Padding(4);
+            estructuras.Margin = new Padding(3, 2, 3, 2);
             estructuras.Name = "estructuras";
-            estructuras.Padding = new Padding(4);
-            estructuras.Size = new Size(290, 187);
+            estructuras.Padding = new Padding(3, 2, 3, 2);
+            estructuras.Size = new Size(201, 95);
             estructuras.TabIndex = 2;
             estructuras.Text = "Estructuras";
             // 
@@ -252,10 +252,9 @@
             guardarButton.FlatStyle = FlatStyle.Flat;
             guardarButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             guardarButton.ForeColor = SystemColors.Control;
-            guardarButton.Location = new Point(0, 434);
-            guardarButton.Margin = new Padding(4, 5, 4, 5);
+            guardarButton.Location = new Point(0, 260);
             guardarButton.Name = "guardarButton";
-            guardarButton.Size = new Size(306, 46);
+            guardarButton.Size = new Size(214, 28);
             guardarButton.TabIndex = 3;
             guardarButton.Text = "Guardar";
             guardarButton.UseVisualStyleBackColor = false;
@@ -268,20 +267,19 @@
             panelDiseñoLayout.AutoScroll = true;
             panelDiseñoLayout.BackColor = SystemColors.InactiveCaption;
             panelDiseñoLayout.Location = new Point(0, 0);
-            panelDiseñoLayout.Margin = new Padding(4);
+            panelDiseñoLayout.Margin = new Padding(3, 2, 3, 2);
             panelDiseñoLayout.Name = "panelDiseñoLayout";
-            panelDiseñoLayout.Size = new Size(764, 577);
+            panelDiseñoLayout.Size = new Size(535, 346);
             panelDiseñoLayout.TabIndex = 2;
             // 
             // Diseño
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1074, 578);
+            ClientSize = new Size(720, 350);
             Controls.Add(panelDiseñoLayout);
             Controls.Add(PanelDeHerramientas);
-            Margin = new Padding(4, 5, 4, 5);
-            MinimumSize = new Size(1091, 622);
+            MinimumSize = new Size(720, 389);
             Name = "Diseño";
             Text = "Diseño";
             FormClosing += Diseño_FormClosing;
@@ -301,12 +299,12 @@
         private TabControl ElementosControl;
         private TabPage mesas;
         private TabPage sillas;
-        private Button button3;
-        private Button mesaMedianaButton;
-        private Button mesaChicaButton;
+        private Button buttonMesaRectangular;
+        private Button mesaCuadradaButton;
+        private Button mesaRedondaButton;
         private Button button4;
-        private Button button5;
-        private Button button6;
+        private Button buttonSillaIndRed;
+        private Button buttonSillaIndCuad;
         private Panel panelDiseñoLayout;
         private Button guardarButton;
         private TabPage estructuras;

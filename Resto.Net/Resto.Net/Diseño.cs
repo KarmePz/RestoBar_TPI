@@ -5,9 +5,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Resto.Net
 {
@@ -49,35 +51,98 @@ namespace Resto.Net
         //Generamos un Label de Mesa chica
         private void mesaChicaButton_Click(object sender, EventArgs e)
         {
-            Panel mesaChicaPanel = new Panel();
-            mesaChicaPanel.Size = new Size(100, 100);
-            mesaChicaPanel.Visible = true;
-            mesaChicaPanel.Location = new Point(100, 150);
-            mesaChicaPanel.BackColor = Color.Magenta;
+            SeleccionarCantSillas formCantSill = new(TipoDeMesa.Redonda);
+            formCantSill.ShowDialog();
+            int cantidadSillas = formCantSill.TipoInt;
 
-            mesaChicaPanel.MouseDown += Elemento_MouseDown;
-            mesaChicaPanel.MouseMove += Elemento_MouseMove;
-            mesaChicaPanel.MouseUp += Elemento_MouseUp;
+            BotonMesa mesaChicaBoton = new BotonMesa(new Mesa(BotonMesa.StaticID++, TipoDeMesa.Redonda, cantidadSillas));
+            mesaChicaBoton.Location = new Point(100, 150);
+            mesaChicaBoton.BackgroundImage = DeterminarImagen(ref mesaChicaBoton, cantidadSillas);
+            mesaChicaBoton.Size = mesaChicaBoton.BackgroundImage.Size;
+            mesaChicaBoton.Tag = mesaChicaBoton.ClaseMesa.Id;
+            mesaChicaBoton.Text = "#" + mesaChicaBoton.Tag.ToString();
 
-            panelDiseñoLayout.Controls.Add(mesaChicaPanel);
+            mesaChicaBoton.MouseDown += Elemento_MouseDown;
+            mesaChicaBoton.MouseMove += Elemento_MouseMove;
+            mesaChicaBoton.MouseUp += Elemento_MouseUp;
 
+            panelDiseñoLayout.Controls.Add(mesaChicaBoton);
+
+        }
+
+        private Image DeterminarImagen(ref BotonMesa botonMesa, int cantSillas)
+        {
+            Mesa claseMesa = botonMesa.ClaseMesa;
+            switch (claseMesa.Tipo)
+            {
+                case TipoDeMesa.Redonda:
+                    switch (claseMesa.Sillas.Count)
+                    {
+                        case 0:
+                            return Properties.Resources.Redondo_1;
+                        case 1:
+                            return Properties.Resources.mesa1;
+                        case 2:
+                            return Properties.Resources.mesa1;
+                        case 3:
+                            return Properties.Resources.mesa1;
+                        case 4:
+                            return Properties.Resources.mesa1;
+                        default:
+                            return Properties.Resources.mesa2;
+                    }
+                case TipoDeMesa.Cuadrada:
+                    switch (claseMesa.Sillas.Count)
+                    {
+                        case 0:
+                            return Properties.Resources.Cuadrado_1;
+                        case 1:
+                            return Properties.Resources.mesa2;
+                        default:
+                            return Properties.Resources.mesa2;
+                    }
+                case TipoDeMesa.Rectangular:
+                    switch (claseMesa.Sillas.Count)
+                    {
+                        case 0:
+                            return Properties.Resources.mesa2;
+                        case 1:
+                            return Properties.Resources.mesa2;
+                        case 2:
+                            return Properties.Resources.mesa2;
+                        case 3:
+                            return Properties.Resources.mesa2;
+                        case 4:
+                            return Properties.Resources.mesa2;
+                        case 5:
+                            return Properties.Resources.mesa2;
+                        default:
+                            return Properties.Resources.mesa2;
+                    }
+                default:
+                    return Properties.Resources.mesa2;
+            }
         }
         //Generamos un Button de Mesa mediana
 
         private void mesaMedianaButton_Click(object sender, EventArgs e)
         {
-            Button mesaMediana = new Button();
-            mesaMediana.Text = "Mesa Mediana";
-            mesaMediana.Visible = true;
-            mesaMediana.Location = new Point(100, 100);
-            mesaMediana.AutoSize = true;
-            mesaMediana.BackColor = Color.Magenta;
+            SeleccionarCantSillas formCantSill = new(TipoDeMesa.Cuadrada);
+            formCantSill.ShowDialog();
+            int cantidadSillas = formCantSill.TipoInt;
 
-            mesaMediana.MouseDown += Elemento_MouseDown;
-            mesaMediana.MouseMove += Elemento_MouseMove;
-            mesaMediana.MouseUp += Elemento_MouseUp;
+            BotonMesa mesaMedianaBoton = new BotonMesa(new Mesa(BotonMesa.StaticID++, TipoDeMesa.Cuadrada, cantidadSillas));
+            mesaMedianaBoton.Location = new Point(100, 100);
+            mesaMedianaBoton.BackgroundImage = DeterminarImagen(ref mesaMedianaBoton, cantidadSillas);
+            mesaMedianaBoton.Size = mesaMedianaBoton.BackgroundImage.Size;
+            mesaMedianaBoton.Tag = mesaMedianaBoton.ClaseMesa.Id;
+            mesaMedianaBoton.Text = "#" + mesaMedianaBoton.Tag.ToString();
 
-            panelDiseñoLayout.Controls.Add(mesaMediana);
+            mesaMedianaBoton.MouseDown += Elemento_MouseDown;
+            mesaMedianaBoton.MouseMove += Elemento_MouseMove;
+            mesaMedianaBoton.MouseUp += Elemento_MouseUp;
+
+            panelDiseñoLayout.Controls.Add(mesaMedianaBoton);
         }
 
         // se controla el movimiento de los distintos objetos en el layout 
@@ -86,7 +151,7 @@ namespace Resto.Net
         {
             if (e.Button == MouseButtons.Left)
             {
-                Control control = sender as Control;
+                Control? control = sender as Control;
                 if (control != null)
                 {
                     arrastrando = true;
@@ -95,7 +160,7 @@ namespace Resto.Net
             }
             else if (e.Button == MouseButtons.Right)
             {
-                Control control = sender as Control;
+                Control? control = sender as Control;
                 if (control != null)
                 {
                     panelDiseñoLayout.Controls.Remove(control);
@@ -138,13 +203,13 @@ namespace Resto.Net
             // Arrastrar el control
             if (arrastrando)
             {
-                Control control = sender as Control;
+                Control? control = sender as Control;
                 if (control != null)
                 {
                     Point newLocation = panelDiseñoLayout.PointToClient(Control.MousePosition);
                     control.Location = new Point(newLocation.X - offset.X, newLocation.Y - offset.Y);
-                    
-                    
+
+
                 }
             }
             //if (arrastrando)
@@ -163,12 +228,12 @@ namespace Resto.Net
             // Liberar el control al soltar el botón izquierdo del ratón
             if (e.Button == MouseButtons.Left)
             {
-                Control control = sender as Control;
+                Control? control = sender as Control;
                 if (control != null)
                 {
                     arrastrando = false;
-                    
-                    
+
+
                 }
             }
 
@@ -271,6 +336,11 @@ namespace Resto.Net
         }
 
         private void mesas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSillaIndCuad_Click(object sender, EventArgs e)
         {
 
         }
