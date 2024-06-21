@@ -37,27 +37,20 @@
             label1 = new Label();
             ElementosControl = new TabControl();
             mesas = new TabPage();
-            MCuadrada = new Button();
-            MCuadrada3_Button = new Button();
-            MCuadrada2_Button = new Button();
-            Mcuadrada1_Button = new Button();
-            MRedonda1_Button = new Button();
-            MRedonda2_Button = new Button();
-            MRedonda3_Button = new Button();
-            MRedonda4_Button = new Button();
-            MRedonda5_Button = new Button();
-            MRedonda6_Button = new Button();
+            button3 = new Button();
+            mesaMedianaButton = new Button();
+            mesaChicaButton = new Button();
             sillas = new TabPage();
-            SillaIndividual_Button = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            button6 = new Button();
             estructuras = new TabPage();
-            Limite_Button = new Button();
             guardarButton = new Button();
             panelDiseñoLayout = new Panel();
             PanelDeHerramientas.SuspendLayout();
             ElementosControl.SuspendLayout();
             mesas.SuspendLayout();
             sillas.SuspendLayout();
-            estructuras.SuspendLayout();
             SuspendLayout();
             // 
             // Salir
@@ -69,7 +62,7 @@
             Salir.FlatStyle = FlatStyle.Flat;
             Salir.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Salir.ForeColor = SystemColors.Control;
-            Salir.Location = new Point(0, 413);
+            Salir.Location = new Point(-1, 406);
             Salir.Margin = new Padding(3, 4, 3, 4);
             Salir.Name = "Salir";
             Salir.Size = new Size(245, 30);
@@ -98,7 +91,7 @@
             // diseño3Button
             // 
             diseño3Button.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            diseño3Button.Location = new Point(3, 135);
+            diseño3Button.Location = new Point(6, 118);
             diseño3Button.Name = "diseño3Button";
             diseño3Button.Size = new Size(235, 32);
             diseño3Button.TabIndex = 8;
@@ -109,7 +102,7 @@
             // diseño2Button
             // 
             diseño2Button.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            diseño2Button.Location = new Point(3, 97);
+            diseño2Button.Location = new Point(6, 80);
             diseño2Button.Name = "diseño2Button";
             diseño2Button.Size = new Size(235, 32);
             diseño2Button.TabIndex = 7;
@@ -120,7 +113,7 @@
             // diseño1Button
             // 
             diseño1Button.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            diseño1Button.Location = new Point(3, 59);
+            diseño1Button.Location = new Point(7, 42);
             diseño1Button.Name = "diseño1Button";
             diseño1Button.Size = new Size(235, 32);
             diseño1Button.TabIndex = 6;
@@ -163,9 +156,9 @@
             ElementosControl.Controls.Add(sillas);
             ElementosControl.Controls.Add(estructuras);
             ElementosControl.Cursor = Cursors.Hand;
-            ElementosControl.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ElementosControl.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ElementosControl.ItemSize = new Size(85, 35);
-            ElementosControl.Location = new Point(3, 184);
+            ElementosControl.Location = new Point(3, 175);
             ElementosControl.Name = "ElementosControl";
             ElementosControl.SelectedIndex = 0;
             ElementosControl.Size = new Size(238, 184);
@@ -173,18 +166,10 @@
             // 
             // mesas
             // 
-            mesas.AutoScroll = true;
             mesas.BackColor = Color.FromArgb(54, 61, 74);
-            mesas.Controls.Add(MCuadrada);
-            mesas.Controls.Add(MCuadrada3_Button);
-            mesas.Controls.Add(MCuadrada2_Button);
-            mesas.Controls.Add(Mcuadrada1_Button);
-            mesas.Controls.Add(MRedonda1_Button);
-            mesas.Controls.Add(MRedonda2_Button);
-            mesas.Controls.Add(MRedonda3_Button);
-            mesas.Controls.Add(MRedonda4_Button);
-            mesas.Controls.Add(MRedonda5_Button);
-            mesas.Controls.Add(MRedonda6_Button);
+            mesas.Controls.Add(button3);
+            mesas.Controls.Add(mesaMedianaButton);
+            mesas.Controls.Add(mesaChicaButton);
             mesas.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             mesas.Location = new Point(4, 39);
             mesas.Name = "mesas";
@@ -193,123 +178,48 @@
             mesas.TabIndex = 0;
             mesas.Text = "Mesas";
             // 
-            // MCuadrada
+            // button3
             // 
-            MCuadrada.Dock = DockStyle.Top;
-            MCuadrada.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            MCuadrada.Location = new Point(3, 408);
-            MCuadrada.Name = "MCuadrada";
-            MCuadrada.Size = new Size(203, 45);
-            MCuadrada.TabIndex = 9;
-            MCuadrada.Text = "Mesa Cuadrada 4";
-            MCuadrada.UseVisualStyleBackColor = true;
+            button3.Dock = DockStyle.Top;
+            button3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.Location = new Point(3, 93);
+            button3.Name = "button3";
+            button3.Size = new Size(224, 45);
+            button3.TabIndex = 2;
+            button3.Text = "Mesa Grande";
+            button3.UseVisualStyleBackColor = true;
             // 
-            // MCuadrada3_Button
+            // mesaMedianaButton
             // 
-            MCuadrada3_Button.Dock = DockStyle.Top;
-            MCuadrada3_Button.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            MCuadrada3_Button.Location = new Point(3, 363);
-            MCuadrada3_Button.Name = "MCuadrada3_Button";
-            MCuadrada3_Button.Size = new Size(203, 45);
-            MCuadrada3_Button.TabIndex = 8;
-            MCuadrada3_Button.Text = "Mesa Cuadrada 3";
-            MCuadrada3_Button.UseVisualStyleBackColor = true;
+            mesaMedianaButton.Dock = DockStyle.Top;
+            mesaMedianaButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mesaMedianaButton.Location = new Point(3, 48);
+            mesaMedianaButton.Name = "mesaMedianaButton";
+            mesaMedianaButton.Size = new Size(224, 45);
+            mesaMedianaButton.TabIndex = 1;
+            mesaMedianaButton.Text = "Mesa Mediana";
+            mesaMedianaButton.UseVisualStyleBackColor = true;
+            mesaMedianaButton.Click += mesaMedianaButton_Click;
             // 
-            // MCuadrada2_Button
+            // mesaChicaButton
             // 
-            MCuadrada2_Button.Dock = DockStyle.Top;
-            MCuadrada2_Button.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            MCuadrada2_Button.Location = new Point(3, 318);
-            MCuadrada2_Button.Name = "MCuadrada2_Button";
-            MCuadrada2_Button.Size = new Size(203, 45);
-            MCuadrada2_Button.TabIndex = 7;
-            MCuadrada2_Button.Text = "Mesa Cuadrada 2";
-            MCuadrada2_Button.UseVisualStyleBackColor = true;
-            // 
-            // Mcuadrada1_Button
-            // 
-            Mcuadrada1_Button.Dock = DockStyle.Top;
-            Mcuadrada1_Button.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Mcuadrada1_Button.Location = new Point(3, 273);
-            Mcuadrada1_Button.Name = "Mcuadrada1_Button";
-            Mcuadrada1_Button.Size = new Size(203, 45);
-            Mcuadrada1_Button.TabIndex = 6;
-            Mcuadrada1_Button.Text = "Mesa Cuadrada 1";
-            Mcuadrada1_Button.UseVisualStyleBackColor = true;
-            // 
-            // MRedonda1_Button
-            // 
-            MRedonda1_Button.Dock = DockStyle.Top;
-            MRedonda1_Button.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            MRedonda1_Button.Location = new Point(3, 228);
-            MRedonda1_Button.Name = "MRedonda1_Button";
-            MRedonda1_Button.Size = new Size(203, 45);
-            MRedonda1_Button.TabIndex = 5;
-            MRedonda1_Button.Text = "Mesa Redonda 1";
-            MRedonda1_Button.UseVisualStyleBackColor = true;
-            // 
-            // MRedonda2_Button
-            // 
-            MRedonda2_Button.Dock = DockStyle.Top;
-            MRedonda2_Button.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            MRedonda2_Button.Location = new Point(3, 183);
-            MRedonda2_Button.Name = "MRedonda2_Button";
-            MRedonda2_Button.Size = new Size(203, 45);
-            MRedonda2_Button.TabIndex = 4;
-            MRedonda2_Button.Text = "Mesa Redonda 2";
-            MRedonda2_Button.UseVisualStyleBackColor = true;
-            // 
-            // MRedonda3_Button
-            // 
-            MRedonda3_Button.Dock = DockStyle.Top;
-            MRedonda3_Button.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            MRedonda3_Button.Location = new Point(3, 138);
-            MRedonda3_Button.Name = "MRedonda3_Button";
-            MRedonda3_Button.Size = new Size(203, 45);
-            MRedonda3_Button.TabIndex = 3;
-            MRedonda3_Button.Text = "Mesa Redonda 3";
-            MRedonda3_Button.UseVisualStyleBackColor = true;
-            // 
-            // MRedonda4_Button
-            // 
-            MRedonda4_Button.Dock = DockStyle.Top;
-            MRedonda4_Button.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            MRedonda4_Button.Location = new Point(3, 93);
-            MRedonda4_Button.Name = "MRedonda4_Button";
-            MRedonda4_Button.Size = new Size(203, 45);
-            MRedonda4_Button.TabIndex = 2;
-            MRedonda4_Button.Text = "Mesa Redonda 4";
-            MRedonda4_Button.UseVisualStyleBackColor = true;
-            // 
-            // MRedonda5_Button
-            // 
-            MRedonda5_Button.Dock = DockStyle.Top;
-            MRedonda5_Button.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            MRedonda5_Button.Location = new Point(3, 48);
-            MRedonda5_Button.Name = "MRedonda5_Button";
-            MRedonda5_Button.Size = new Size(203, 45);
-            MRedonda5_Button.TabIndex = 1;
-            MRedonda5_Button.Text = "Mesa Redonda 5";
-            MRedonda5_Button.UseVisualStyleBackColor = true;
-            MRedonda5_Button.Click += mesaMedianaButton_Click;
-            // 
-            // MRedonda6_Button
-            // 
-            MRedonda6_Button.AutoSize = true;
-            MRedonda6_Button.Dock = DockStyle.Top;
-            MRedonda6_Button.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            MRedonda6_Button.Location = new Point(3, 3);
-            MRedonda6_Button.Name = "MRedonda6_Button";
-            MRedonda6_Button.Size = new Size(203, 45);
-            MRedonda6_Button.TabIndex = 0;
-            MRedonda6_Button.Text = "Mesa Redonda 6";
-            MRedonda6_Button.UseVisualStyleBackColor = true;
-            MRedonda6_Button.Click += mesaChicaButton_Click;
+            mesaChicaButton.AutoSize = true;
+            mesaChicaButton.Dock = DockStyle.Top;
+            mesaChicaButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mesaChicaButton.Location = new Point(3, 3);
+            mesaChicaButton.Name = "mesaChicaButton";
+            mesaChicaButton.Size = new Size(224, 45);
+            mesaChicaButton.TabIndex = 0;
+            mesaChicaButton.Text = "Mesa Chica";
+            mesaChicaButton.UseVisualStyleBackColor = true;
+            mesaChicaButton.Click += mesaChicaButton_Click;
             // 
             // sillas
             // 
-            sillas.BackColor = Color.FromArgb(54, 61, 74);
-            sillas.Controls.Add(SillaIndividual_Button);
+            sillas.BackColor = Color.RosyBrown;
+            sillas.Controls.Add(button4);
+            sillas.Controls.Add(button5);
+            sillas.Controls.Add(button6);
             sillas.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             sillas.Location = new Point(4, 39);
             sillas.Name = "sillas";
@@ -318,21 +228,39 @@
             sillas.TabIndex = 1;
             sillas.Text = "Sillas";
             // 
-            // SillaIndividual_Button
+            // button4
             // 
-            SillaIndividual_Button.Dock = DockStyle.Top;
-            SillaIndividual_Button.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SillaIndividual_Button.Location = new Point(3, 3);
-            SillaIndividual_Button.Name = "SillaIndividual_Button";
-            SillaIndividual_Button.Size = new Size(224, 45);
-            SillaIndividual_Button.TabIndex = 3;
-            SillaIndividual_Button.Text = "Silla individual";
-            SillaIndividual_Button.UseVisualStyleBackColor = true;
+            button4.Dock = DockStyle.Top;
+            button4.Location = new Point(3, 93);
+            button4.Name = "button4";
+            button4.Size = new Size(224, 45);
+            button4.TabIndex = 5;
+            button4.Text = "silla 3";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Dock = DockStyle.Top;
+            button5.Location = new Point(3, 48);
+            button5.Name = "button5";
+            button5.Size = new Size(224, 45);
+            button5.TabIndex = 4;
+            button5.Text = "silla 2";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Dock = DockStyle.Top;
+            button6.Location = new Point(3, 3);
+            button6.Name = "button6";
+            button6.Size = new Size(224, 45);
+            button6.TabIndex = 3;
+            button6.Text = "silla 1";
+            button6.UseVisualStyleBackColor = true;
             // 
             // estructuras
             // 
             estructuras.BackColor = Color.FromArgb(54, 61, 74);
-            estructuras.Controls.Add(Limite_Button);
             estructuras.Location = new Point(4, 39);
             estructuras.Name = "estructuras";
             estructuras.Padding = new Padding(3);
@@ -340,31 +268,20 @@
             estructuras.TabIndex = 2;
             estructuras.Text = "Estructuras";
             // 
-            // Limite_Button
-            // 
-            Limite_Button.Dock = DockStyle.Top;
-            Limite_Button.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Limite_Button.Location = new Point(3, 3);
-            Limite_Button.Name = "Limite_Button";
-            Limite_Button.Size = new Size(224, 45);
-            Limite_Button.TabIndex = 4;
-            Limite_Button.Text = "Límite";
-            Limite_Button.UseVisualStyleBackColor = true;
-            Limite_Button.Click += Limite_Button_Click;
-            // 
             // guardarButton
             // 
             guardarButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            guardarButton.AutoSize = true;
             guardarButton.BackColor = Color.FromArgb(37, 43, 52);
             guardarButton.BackgroundImageLayout = ImageLayout.None;
             guardarButton.FlatAppearance.BorderColor = Color.FromArgb(37, 43, 52);
             guardarButton.FlatStyle = FlatStyle.Flat;
             guardarButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guardarButton.ForeColor = SystemColors.Control;
-            guardarButton.Location = new Point(-3, 375);
+            guardarButton.Location = new Point(0, 366);
             guardarButton.Margin = new Padding(3, 4, 3, 4);
             guardarButton.Name = "guardarButton";
-            guardarButton.Size = new Size(245, 30);
+            guardarButton.Size = new Size(245, 32);
             guardarButton.TabIndex = 3;
             guardarButton.Text = "Guardar";
             guardarButton.UseVisualStyleBackColor = false;
@@ -378,7 +295,7 @@
             panelDiseñoLayout.BackColor = SystemColors.InactiveCaption;
             panelDiseñoLayout.Location = new Point(0, 0);
             panelDiseñoLayout.Name = "panelDiseñoLayout";
-            panelDiseñoLayout.Size = new Size(611, 462);
+            panelDiseñoLayout.Size = new Size(611, 455);
             panelDiseñoLayout.TabIndex = 2;
             // 
             // Diseño
@@ -389,7 +306,7 @@
             Controls.Add(panelDiseñoLayout);
             Controls.Add(PanelDeHerramientas);
             Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(876, 507);
+            MinimumSize = new Size(877, 509);
             Name = "Diseño";
             Text = "Diseño";
             FormClosing += Diseño_FormClosing;
@@ -399,7 +316,6 @@
             mesas.ResumeLayout(false);
             mesas.PerformLayout();
             sillas.ResumeLayout(false);
-            estructuras.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -410,25 +326,17 @@
         private TabControl ElementosControl;
         private TabPage mesas;
         private TabPage sillas;
-        private Button MRedonda4_Button;
-        private Button MRedonda5_Button;
-        private Button MRedonda6_Button;
+        private Button button3;
+        private Button mesaMedianaButton;
+        private Button mesaChicaButton;
         private Button button4;
         private Button button5;
-        private Button SillaIndividual_Button;
+        private Button button6;
         private Panel panelDiseñoLayout;
         private Button guardarButton;
         private TabPage estructuras;
         private Label Vision;
         private Label label1;
-        private Button MCuadrada;
-        private Button MCuadrada3_Button;
-        private Button MCuadrada2_Button;
-        private Button Mcuadrada1_Button;
-        private Button MRedonda1_Button;
-        private Button MRedonda2_Button;
-        private Button MRedonda3_Button;
-        private Button Limite_Button;
         private Button diseño3Button;
         private Button diseño2Button;
         private Button diseño1Button;

@@ -31,7 +31,8 @@
             panelDiseñoLayout = new Panel();
             PanelDeHerramientas = new Panel();
             Salir = new Button();
-            labelResto = new Label();
+            Vision = new Label();
+            label1 = new Label();
             PanelDeHerramientas.SuspendLayout();
             SuspendLayout();
             // 
@@ -39,24 +40,22 @@
             // 
             panelDiseñoLayout.AllowDrop = true;
             panelDiseñoLayout.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panelDiseñoLayout.AutoScroll = true;
             panelDiseñoLayout.BackColor = SystemColors.InactiveCaption;
             panelDiseñoLayout.Location = new Point(0, 0);
-            panelDiseñoLayout.Margin = new Padding(4, 4, 4, 4);
             panelDiseñoLayout.Name = "panelDiseñoLayout";
-            panelDiseñoLayout.Size = new Size(764, 569);
+            panelDiseñoLayout.Size = new Size(611, 455);
             panelDiseñoLayout.TabIndex = 4;
             // 
             // PanelDeHerramientas
             // 
             PanelDeHerramientas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             PanelDeHerramientas.BackColor = Color.FromArgb(54, 61, 74);
+            PanelDeHerramientas.Controls.Add(Vision);
+            PanelDeHerramientas.Controls.Add(label1);
             PanelDeHerramientas.Controls.Add(Salir);
-            PanelDeHerramientas.Controls.Add(labelResto);
-            PanelDeHerramientas.Location = new Point(764, 0);
-            PanelDeHerramientas.Margin = new Padding(4, 4, 4, 4);
+            PanelDeHerramientas.Location = new Point(611, 0);
             PanelDeHerramientas.Name = "PanelDeHerramientas";
-            PanelDeHerramientas.Size = new Size(306, 569);
+            PanelDeHerramientas.Size = new Size(245, 455);
             PanelDeHerramientas.TabIndex = 3;
             // 
             // Salir
@@ -65,43 +64,59 @@
             Salir.BackColor = Color.FromArgb(37, 43, 52);
             Salir.FlatAppearance.BorderColor = Color.FromArgb(37, 43, 52);
             Salir.FlatStyle = FlatStyle.Flat;
-            Salir.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
+            Salir.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Salir.ForeColor = SystemColors.Control;
-            Salir.Location = new Point(0, 498);
-            Salir.Margin = new Padding(4, 5, 4, 5);
+            Salir.Location = new Point(0, 398);
+            Salir.Margin = new Padding(3, 4, 3, 4);
             Salir.Name = "Salir";
-            Salir.Size = new Size(302, 38);
+            Salir.Size = new Size(242, 30);
             Salir.TabIndex = 0;
-            Salir.Text = "Salir";
+            Salir.Text = "Volver";
             Salir.UseVisualStyleBackColor = false;
             Salir.Click += Salir_Click;
             // 
-            // labelResto
+            // Vision
             // 
-            labelResto.Dock = DockStyle.Top;
-            labelResto.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelResto.ForeColor = SystemColors.Control;
-            labelResto.Location = new Point(0, 0);
-            labelResto.Margin = new Padding(4, 0, 4, 0);
-            labelResto.Name = "labelResto";
-            labelResto.Size = new Size(306, 44);
-            labelResto.TabIndex = 2;
-            labelResto.Text = "Resto .NET";
-            labelResto.TextAlign = ContentAlignment.MiddleCenter;
+            Vision.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            Vision.AutoSize = true;
+            Vision.BackColor = Color.Transparent;
+            Vision.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold);
+            Vision.ForeColor = Color.FromArgb(113, 188, 252);
+            Vision.Location = new Point(121, 9);
+            Vision.Margin = new Padding(0);
+            Vision.Name = "Vision";
+            Vision.Size = new Size(89, 29);
+            Vision.TabIndex = 7;
+            Vision.Text = "Vision";
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(54, 61, 74);
+            label1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(45, 9);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(84, 29);
+            label1.TabIndex = 6;
+            label1.Text = "Restó";
             // 
             // Preview
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1074, 578);
+            ClientSize = new Size(859, 462);
             Controls.Add(PanelDeHerramientas);
             Controls.Add(panelDiseñoLayout);
-            Margin = new Padding(4, 5, 4, 5);
-            MinimumSize = new Size(1091, 622);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(877, 509);
             Name = "Preview";
             Text = "Previuw";
             FormClosing += Preview_FormClosing;
             PanelDeHerramientas.ResumeLayout(false);
+            PanelDeHerramientas.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -109,7 +124,8 @@
 
         private Panel panelDiseñoLayout;
         private Panel PanelDeHerramientas;
-        private Label labelResto;
         private Button Salir;
+        private Label Vision;
+        private Label label1;
     }
 }
