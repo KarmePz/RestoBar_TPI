@@ -81,7 +81,7 @@ namespace Resto.Net
         // Generamos un BotonMesa de mesa chica
         private void mesaChicaButton_Click(object sender, EventArgs e)
         {
-            SeleccionarCantSillas formCantSill = new(TipoDeMesa.Redonda);
+            CantSillasForm formCantSill = new(TipoDeMesa.Redonda);
             formCantSill.ShowDialog();
             int cantidadSillas = formCantSill.TipoInt;
 
@@ -103,7 +103,7 @@ namespace Resto.Net
         //Generamos un BotonMesa de Mesa mediana
         private void mesaMedianaButton_Click(object sender, EventArgs e)
         {
-            SeleccionarCantSillas formCantSill = new(TipoDeMesa.Cuadrada);
+            CantSillasForm formCantSill = new(TipoDeMesa.Cuadrada);
             formCantSill.ShowDialog();
             int cantidadSillas = formCantSill.TipoInt;
 

@@ -109,6 +109,7 @@ namespace Resto.Net
         {
             SeleccionarCantSillas formCantSill = new(TipoDeMesa.Redonda);
             formCantSill.ShowDialog();
+
             int cantidadSillas = formCantSill.TipoInt;
 
 
@@ -122,6 +123,7 @@ namespace Resto.Net
 
             mesaRedondaBoton.FlatStyle = FlatStyle.Flat;
             mesaRedondaBoton.FlatAppearance.BorderSize = 0;
+            mesaRedondaButton.ContextMenuStrip = contextMenuLayoutItem;
             //mesaRedondaBoton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
 
             mesaRedondaBoton.BackColor = Color.Transparent;
@@ -156,6 +158,7 @@ namespace Resto.Net
 
             mesaCuadradaBoton.FlatStyle = FlatStyle.Flat;
             mesaCuadradaBoton.FlatAppearance.BorderSize = 0;
+            mesaCuadradaBoton.ContextMenuStrip = contextMenuLayoutItem;
             //mesaCuadradaBoton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
 
             mesaCuadradaBoton.BackColor = Color.Transparent;
@@ -186,6 +189,7 @@ namespace Resto.Net
 
             mesaRectangularBoton.FlatStyle = FlatStyle.Flat;
             mesaRectangularBoton.FlatAppearance.BorderSize = 0;
+            mesaRedondaButton.ContextMenuStrip = contextMenuLayoutItem;
             //mesaRectangularBoton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
 
             mesaRectangularBoton.BackColor = Color.Transparent;
@@ -217,6 +221,7 @@ namespace Resto.Net
 
             mesaEspecialesBoton.FlatStyle = FlatStyle.Flat;
             mesaEspecialesBoton.FlatAppearance.BorderSize = 0;
+            mesaEspecialesBoton.ContextMenuStrip = contextMenuLayoutItem;
             //mesaEspecialesBoton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
 
             mesaEspecialesBoton.BackColor = Color.Transparent;
@@ -324,9 +329,9 @@ namespace Resto.Net
                         elemento.Id = botonMesa.ClaseMesa.Id;
                         elemento.TipoMesa = botonMesa.ClaseMesa.Tipo.ToString();
                         elemento.CantidadSillas = botonMesa.ClaseMesa.Sillas.Count;
-                        
-                       //añadido recientemente
-               
+
+                        //añadido recientemente
+
                     }
 
                     elementos.Add(elemento);
@@ -348,7 +353,7 @@ namespace Resto.Net
             {
                 BotonMesa.StaticID = 1;
                 panelDiseñoLayout.Controls.Clear();
-            
+
 
                 string json = File.ReadAllText(archivo);
                 var elementos = JsonSerializer.Deserialize<List<ElementoGuardado>>(json);
@@ -366,6 +371,7 @@ namespace Resto.Net
                         botonMesa.FlatAppearance.BorderSize = 0;
                         botonMesa.BackColor = Color.Transparent;
                         botonMesa.BackgroundImageLayout = ImageLayout.Zoom;
+                        botonMesa.ContextMenuStrip = contextMenuLayoutItem;
 
 
                         BotonMesa.StaticID = elemento.Id > BotonMesa.StaticID ? elemento.Id : BotonMesa.StaticID;
@@ -374,7 +380,7 @@ namespace Resto.Net
                         control.MouseDown += Elemento_MouseDown;
                         control.MouseMove += Elemento_MouseMove;
                         control.MouseUp += Elemento_MouseUp;
-                        
+
                     }
                     else if (elemento.Tipo == nameof(Panel))
                     {
@@ -383,10 +389,12 @@ namespace Resto.Net
                             Size = new Size(elemento.Ancho, elemento.Alto),
                             BackColor = Color.FromArgb(elemento.ColorFondo),
                             Location = new Point(elemento.X, elemento.Y),
-                            BorderStyle = BorderStyle.FixedSingle
+                            BorderStyle = BorderStyle.FixedSingle,
+                            ContextMenuStrip = contextMenuLayoutItem
                         };
 
-                        control.DoubleClick += Panel_DoubleClick;
+
+
                         control.MouseDown += new MouseEventHandler(Panel_MouseDown);
                         control.MouseMove += new MouseEventHandler(Panel_MouseMove);
                         control.MouseUp += new MouseEventHandler(Panel_MouseUp);
@@ -457,9 +465,11 @@ namespace Resto.Net
                 BorderStyle = BorderStyle.FixedSingle,
                 Location = new Point((this.ClientSize.Width - 100) / 2, (this.ClientSize.Height - 100) / 2) // Centrar el panel
             };
+            newPanel.ContextMenuStrip = contextMenuLayoutItem;
+
 
             // Eventos para que el panel sea redimensionable y coloreable
-            newPanel.DoubleClick += Panel_DoubleClick;
+
             newPanel.MouseDown += new MouseEventHandler(Panel_MouseDown);
             newPanel.MouseMove += new MouseEventHandler(Panel_MouseMove);
             newPanel.MouseUp += new MouseEventHandler(Panel_MouseUp);
@@ -469,18 +479,7 @@ namespace Resto.Net
         }
         // no tocar (por las dudas xd)
 
-        private void Panel_DoubleClick(object sender, EventArgs e)
-        {
-            Panel panel = sender as Panel;
 
-            using (ColorDialog colorDialog = new ColorDialog())
-            {
-                if (colorDialog.ShowDialog() == DialogResult.OK)
-                {
-                    panel.BackColor = colorDialog.Color;
-                }
-            }
-        }
         private void Panel_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -738,6 +737,124 @@ namespace Resto.Net
             silla7Boton.MouseUp += Elemento_MouseUp;
 
             panelDiseñoLayout.Controls.Add(silla7Boton);
+        }
+
+        private void borrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            ToolStripMenuItem menuItem = sender as ToolStripMenuItem;//obtener el toolstrip del evento
+
+            ContextMenuStrip menu = menuItem.Owner as ContextMenuStrip;//obtener el CMenuStrip asociado
+
+            Control control = menu.SourceControl as Control;
+
+            if (control != null)
+            {
+                panelDiseñoLayout.Controls.Remove(control);
+                control.Dispose(); // Liberar recursos del control eliminado
+            }
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            ToolStripMenuItem menuItem = sender as ToolStripMenuItem;//obtener el toolstrip del evento
+
+            ContextMenuStrip menu = menuItem.Owner as ContextMenuStrip;//obtener el CMenuStrip asociado
+
+            Control control = menu.SourceControl as Control;
+
+
+            using (ColorDialog colorDialog = new ColorDialog())
+            {
+                if (colorDialog.ShowDialog() == DialogResult.OK)
+                {
+                    control.BackColor = colorDialog.Color;
+                }
+            }
+        }
+
+        private void cambiarColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem menuItem = sender as ToolStripMenuItem;//obtener el toolstrip del evento
+
+            ContextMenuStrip menu = menuItem.Owner as ContextMenuStrip;//obtener el CMenuStrip asociado
+
+            Control control = menu.SourceControl as Control;
+
+
+            using (ColorDialog colorDialog = new ColorDialog())
+            {
+                if (colorDialog.ShowDialog() == DialogResult.OK)
+                {
+                    control.BackColor = colorDialog.Color;
+                }
+            }
+
+
+        }
+        private void ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void Editar_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            ToolStripMenuItem menuItem = sender as ToolStripMenuItem;//obtener el toolstrip del evento
+
+            ContextMenuStrip menu = menuItem.Owner as ContextMenuStrip;//obtener el CMenuStrip asociado
+
+            Control control = menu.SourceControl as Control;
+
+            switch (e.ClickedItem.Text)
+            {
+                case "Color":
+                    // Acción para "color"
+                    //Cambia de color el panel
+                    using (ColorDialog colorDialog = new ColorDialog())
+                    {
+                        if (colorDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            control.BackColor = colorDialog.Color;
+                        }
+                    }
+
+                    break;
+                case "ID":
+                    // Acción para "Open"
+                    MessageBox.Show("NO IMPLEMENTADO");
+                    break;
+                case "Nombre":
+                    // Acción para "Save"
+                    EditarNombre_form editarNombre = new EditarNombre_form();
+                    editarNombre.ShowDialog();
+                    Label label = new Label();
+                    label.Text = editarNombre.Texto;
+                    label.AutoSize = true;
+                    label.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+
+                    control.Controls.Add(label);
+                    break;
+                default:
+                    // Acción predeterminada
+                    MessageBox.Show("NO IMPLEMENTADO");
+                    break;
+            }
+        }
+
+        private void moverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("NO IMPLEMENTADO");
+        }
+
+        private void verDetallesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("NO IMPLEMENTADO");
+        }
+
+        private void rotarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("NO IMPLEMENTADO");
         }
     }
 }

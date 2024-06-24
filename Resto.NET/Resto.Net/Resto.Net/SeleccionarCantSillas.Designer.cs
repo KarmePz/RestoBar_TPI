@@ -1,6 +1,6 @@
 ﻿namespace Resto.Net
 {
-    partial class SeleccionarCantSillas
+    partial class CantSillasForm
     {
         /// <summary>
         /// Required designer variable.

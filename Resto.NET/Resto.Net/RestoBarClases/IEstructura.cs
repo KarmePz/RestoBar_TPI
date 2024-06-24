@@ -9,6 +9,8 @@ namespace RestoBarClases
     {
         //Probablemente estas dos propiedades no sean necesarias
         //pues ya pueden estar incluidas en la clase de UserControl
+        //public double Nombre { get; set; }
+
         public double Longitud { get; set; }
         public double Ancho { get; set; }
     }

@@ -8,6 +8,7 @@
         public BotonMesa(Mesa claseMesa)
         {
             ClaseMesa = claseMesa;
+            this.ContextMenuStrip = new ContextMenuStrip();
         }
     }
     internal class BotonSilla : Button

@@ -2,10 +2,10 @@
 
 namespace Resto.Net
 {
-    public partial class SeleccionarCantSillas : Form
+    public partial class CantSillasForm : Form
     {
         public int TipoInt { get; set; }
-        public SeleccionarCantSillas(TipoDeMesa tipoDeMesa)
+        public CantSillasForm(TipoDeMesa tipoDeMesa)
         {
             InitializeComponent();
             TipoInt = (int)tipoDeMesa;

@@ -55,5 +55,10 @@ namespace Resto.Net
                 Close();
             }
         }
+
+        private void SelecSillas_formClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }
