@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using Resto.Net.Clases;
 using Microsoft.VisualBasic.Logging;
 using System.Diagnostics;
-using System.Reflection.Emit;
+
 namespace Resto.Net
 {
     public partial class Diseño : Form
