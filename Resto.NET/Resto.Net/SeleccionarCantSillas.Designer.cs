@@ -38,16 +38,18 @@
             comboBoxSelecCant.BackColor = SystemColors.MenuBar;
             comboBoxSelecCant.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxSelecCant.FormattingEnabled = true;
-            comboBoxSelecCant.Location = new Point(57, 152);
+            comboBoxSelecCant.Location = new Point(81, 253);
+            comboBoxSelecCant.Margin = new Padding(4, 5, 4, 5);
             comboBoxSelecCant.Name = "comboBoxSelecCant";
-            comboBoxSelecCant.Size = new Size(121, 23);
+            comboBoxSelecCant.Size = new Size(171, 33);
             comboBoxSelecCant.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(79, 181);
+            button1.Location = new Point(113, 302);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(107, 38);
             button1.TabIndex = 1;
             button1.Text = "Seleccionar";
             button1.UseVisualStyleBackColor = true;
@@ -55,13 +57,15 @@
             // 
             // SeleccionarCantSillas
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(240, 344);
+            ClientSize = new Size(343, 573);
             Controls.Add(button1);
             Controls.Add(comboBoxSelecCant);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "SeleccionarCantSillas";
             Text = "SeleccionarCantSillas";
+            FormClosing += SelecSillas_formClosing;
             Load += SeleccionarCantSillas_Load;
             ResumeLayout(false);
         }

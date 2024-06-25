@@ -51,9 +51,14 @@ namespace Resto.Net
             }
             else
             {
-                TipoInt = comboBoxSelecCant.SelectedIndex;
+                TipoInt = (int)comboBoxSelecCant.SelectedItem;
                 Close();
             }
+        }
+
+        private void SelecSillas_formClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

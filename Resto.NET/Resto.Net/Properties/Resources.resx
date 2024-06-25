@@ -226,4 +226,115 @@
   <data name="MesaEspecial12RojaCopia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MesaEspecial12RojaCopia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MesaCuadrada4_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaCuadrada4_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaCuadrada4_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaCuadrada4_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaCuadrada8_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaCuadrada8_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaCuadrada8_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaCuadrada8_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaEspecial10_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaEspecial10_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaEspecial10_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaEspecial10_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaEspecial12_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaEspecial12_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaEspecial12_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaEspecial12_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaRedonda2Sillas_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaRedonda2Sillas_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaRedonda2Sillas_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaRedonda2Sillas_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaRedonda3Roja_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaRedonda3Roja_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaRedonda3Roja_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaRedonda3Roja_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaRedonda4Roja_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaRedonda4Roja_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaRedonda4Roja_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaRedonda4Roja_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaRedonda5_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaRedonda5_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaRedonda5_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaRedonda5_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaRedonda6_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaRedonda6_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaRedonda6_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaRedonda6_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaRedonda7_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaRedonda7_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesaRedonda7_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesaRedonda7_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesasRectangular2_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesasRectangular2_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesasRectangular2_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesasRectangular2_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesasRectangular4_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesasRectangular4_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesasRectangular4_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesasRectangular4_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesasRectangular6_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesasRectangular6_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesasRectangular6_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesasRectangular6_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesasRectangular8Roja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesasRectangular8Roja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesasRectangular8_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesasRectangular8_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MesasRectangular8_reservada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MesasRectangular8_reservada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Silla1_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silla1_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Silla2_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silla2_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Silla31_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silla31_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Silla3_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silla3_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Silla4_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silla4_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Silla5_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silla5_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Silla6_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silla6_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Silla7_libre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silla7_libre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

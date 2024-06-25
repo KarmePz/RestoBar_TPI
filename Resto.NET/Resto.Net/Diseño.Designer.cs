@@ -56,8 +56,10 @@
             panelDiseñoLayout = new Panel();
             contextMenuLayoutItem = new ContextMenuStrip(components);
             borrarToolStripMenuItem = new ToolStripMenuItem();
-            moverToolStripMenuItem = new ToolStripMenuItem();
-            verDetallesToolStripMenuItem = new ToolStripMenuItem();
+            cambiarColorToolStripMenuItem = new ToolStripMenuItem();
+            colorToolStripMenuItem1 = new ToolStripMenuItem();
+            nombreToolStripMenuItem = new ToolStripMenuItem();
+            rotarToolStripMenuItem = new ToolStripMenuItem();
             mesaRedondaButton = new Button();
             PanelDeHerramientas.SuspendLayout();
             ElementosControl.SuspendLayout();
@@ -423,27 +425,43 @@
             // contextMenuLayoutItem
             // 
             contextMenuLayoutItem.ImageScalingSize = new Size(24, 24);
-            contextMenuLayoutItem.Items.AddRange(new ToolStripItem[] { borrarToolStripMenuItem, moverToolStripMenuItem, verDetallesToolStripMenuItem });
+            contextMenuLayoutItem.Items.AddRange(new ToolStripItem[] { borrarToolStripMenuItem, cambiarColorToolStripMenuItem, rotarToolStripMenuItem });
             contextMenuLayoutItem.Name = "contextMenuLayoutItem";
-            contextMenuLayoutItem.Size = new Size(177, 100);
+            contextMenuLayoutItem.Size = new Size(241, 133);
             // 
             // borrarToolStripMenuItem
             // 
             borrarToolStripMenuItem.Name = "borrarToolStripMenuItem";
             borrarToolStripMenuItem.Size = new Size(240, 32);
             borrarToolStripMenuItem.Text = "Borrar";
+            borrarToolStripMenuItem.Click += borrarToolStripMenuItem_Click;
             // 
-            // moverToolStripMenuItem
+            // cambiarColorToolStripMenuItem
             // 
-            moverToolStripMenuItem.Name = "moverToolStripMenuItem";
-            moverToolStripMenuItem.Size = new Size(240, 32);
-            moverToolStripMenuItem.Text = "Mover";
+            cambiarColorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { colorToolStripMenuItem1, nombreToolStripMenuItem });
+            cambiarColorToolStripMenuItem.Name = "cambiarColorToolStripMenuItem";
+            cambiarColorToolStripMenuItem.Size = new Size(240, 32);
+            cambiarColorToolStripMenuItem.Text = "Editar";
+            cambiarColorToolStripMenuItem.DropDownItemClicked += Editar_ItemClicked;
             // 
-            // verDetallesToolStripMenuItem
+            // colorToolStripMenuItem1
             // 
-            verDetallesToolStripMenuItem.Name = "verDetallesToolStripMenuItem";
-            verDetallesToolStripMenuItem.Size = new Size(240, 32);
-            verDetallesToolStripMenuItem.Text = "Ver Detalles";
+            colorToolStripMenuItem1.Name = "colorToolStripMenuItem1";
+            colorToolStripMenuItem1.Size = new Size(270, 34);
+            colorToolStripMenuItem1.Text = "Color";
+            // 
+            // nombreToolStripMenuItem
+            // 
+            nombreToolStripMenuItem.Name = "nombreToolStripMenuItem";
+            nombreToolStripMenuItem.Size = new Size(270, 34);
+            nombreToolStripMenuItem.Text = "Nombre";
+            // 
+            // rotarToolStripMenuItem
+            // 
+            rotarToolStripMenuItem.Name = "rotarToolStripMenuItem";
+            rotarToolStripMenuItem.Size = new Size(240, 32);
+            rotarToolStripMenuItem.Text = "Rotar";
+            rotarToolStripMenuItem.Click += rotarToolStripMenuItem_Click;
             // 
             // Diseño
             // 
@@ -497,7 +515,9 @@
         private Button Silla4;
         private ContextMenuStrip contextMenuLayoutItem;
         private ToolStripMenuItem borrarToolStripMenuItem;
-        private ToolStripMenuItem moverToolStripMenuItem;
-        private ToolStripMenuItem verDetallesToolStripMenuItem;
+        private ToolStripMenuItem cambiarColorToolStripMenuItem;
+        private ToolStripMenuItem rotarToolStripMenuItem;
+        private ToolStripMenuItem colorToolStripMenuItem1;
+        private ToolStripMenuItem nombreToolStripMenuItem;
     }
 }
