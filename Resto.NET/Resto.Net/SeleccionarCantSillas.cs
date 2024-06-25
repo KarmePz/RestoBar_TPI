@@ -51,7 +51,11 @@ namespace Resto.Net
             }
             else
             {
+<<<<<<< HEAD:Resto.Net/Resto.Net/SeleccionarCantSillas.cs
+                TipoInt = comboBoxSelecCant.SelectedIndex;
+=======
                 TipoInt = (int)comboBoxSelecCant.SelectedItem;
+>>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/SeleccionarCantSillas.cs
                 Close();
             }
         }

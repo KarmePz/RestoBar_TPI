@@ -25,7 +25,7 @@ namespace RestoBarClases
             Sillas = new List<Silla>();
             for (int i = 0; i < cantSillas; i++)
             {
-                Sillas.Add(new Silla(false));
+                Sillas.Add(new Silla(id, TipoDeSilla.TipoDefault, false));
             }
             Consumo = 0;
             Ocupada = false;
