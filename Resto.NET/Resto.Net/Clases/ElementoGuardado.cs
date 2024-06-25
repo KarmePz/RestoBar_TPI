@@ -19,17 +19,7 @@ namespace Resto.Net.Clases
         public int Id { get; set; } // ID del elemento
         public string TipoMesa { get; set; } // Tipo de mesa (para BotonMesa)
         public int CantidadSillas { get; set; } // Cantidad de sillas (para BotonMesa)
-<<<<<<< HEAD:Resto.Net/Resto.Net/Clases/ElementoGuardado.cs
         public string TipoDeSilla { get; set; }
         public int GradoRotacion { get; set; }
-=======
-        
-    }
-    public class LabelInterno
-    {
-        public string Text { get; set; }
-        public int LocationX { get; set; }
-        public int LocationY { get; set; }
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Clases/ElementoGuardado.cs
     }
 }

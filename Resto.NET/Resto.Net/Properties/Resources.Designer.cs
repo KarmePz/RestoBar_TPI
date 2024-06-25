@@ -183,8 +183,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesaCuadrada4_libre {
             get {
                 object obj = ResourceManager.GetObject("MesaCuadrada4_libre", resourceCulture);
@@ -205,7 +203,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesaCuadrada4Roja {
             get {
                 object obj = ResourceManager.GetObject("MesaCuadrada4Roja", resourceCulture);
@@ -216,8 +213,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesaCuadrada8_libre {
             get {
                 object obj = ResourceManager.GetObject("MesaCuadrada8_libre", resourceCulture);
@@ -238,7 +233,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesaCuadrada8Roja {
             get {
                 object obj = ResourceManager.GetObject("MesaCuadrada8Roja", resourceCulture);
@@ -249,8 +243,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesaEspecial10_libre {
             get {
                 object obj = ResourceManager.GetObject("MesaEspecial10_libre", resourceCulture);
@@ -271,7 +263,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesaEspecial10Roja {
             get {
                 object obj = ResourceManager.GetObject("MesaEspecial10Roja", resourceCulture);
@@ -292,8 +283,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesaEspecial12_libre {
             get {
                 object obj = ResourceManager.GetObject("MesaEspecial12_libre", resourceCulture);
@@ -314,7 +303,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesaEspecial12Roja {
             get {
                 object obj = ResourceManager.GetObject("MesaEspecial12Roja", resourceCulture);
@@ -345,8 +333,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesaRedonda2Sillas_libre {
             get {
                 object obj = ResourceManager.GetObject("MesaRedonda2Sillas_libre", resourceCulture);
@@ -367,7 +353,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesaRedonda3Roja {
             get {
                 object obj = ResourceManager.GetObject("MesaRedonda3Roja", resourceCulture);
@@ -378,8 +363,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesaRedonda3Roja_libre {
             get {
                 object obj = ResourceManager.GetObject("MesaRedonda3Roja_libre", resourceCulture);
@@ -400,7 +383,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesaRedonda4Roja {
             get {
                 object obj = ResourceManager.GetObject("MesaRedonda4Roja", resourceCulture);
@@ -411,8 +393,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesaRedonda4Roja_libre {
             get {
                 object obj = ResourceManager.GetObject("MesaRedonda4Roja_libre", resourceCulture);
@@ -453,7 +433,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesaRedonda5Roja {
             get {
                 object obj = ResourceManager.GetObject("MesaRedonda5Roja", resourceCulture);
@@ -464,8 +443,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesaRedonda6_libre {
             get {
                 object obj = ResourceManager.GetObject("MesaRedonda6_libre", resourceCulture);
@@ -486,7 +463,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesaRedonda6Roja {
             get {
                 object obj = ResourceManager.GetObject("MesaRedonda6Roja", resourceCulture);
@@ -497,8 +473,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesaRedonda7_libre {
             get {
                 object obj = ResourceManager.GetObject("MesaRedonda7_libre", resourceCulture);
@@ -519,7 +493,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesaRedonda8Roja {
             get {
                 object obj = ResourceManager.GetObject("MesaRedonda8Roja", resourceCulture);
@@ -530,8 +503,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesasRectangular2_libre {
             get {
                 object obj = ResourceManager.GetObject("MesasRectangular2_libre", resourceCulture);
@@ -552,7 +523,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesasRectangular2Roja {
             get {
                 object obj = ResourceManager.GetObject("MesasRectangular2Roja", resourceCulture);
@@ -563,8 +533,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesasRectangular4_libre {
             get {
                 object obj = ResourceManager.GetObject("MesasRectangular4_libre", resourceCulture);
@@ -585,7 +553,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesasRectangular4Roja {
             get {
                 object obj = ResourceManager.GetObject("MesasRectangular4Roja", resourceCulture);
@@ -596,8 +563,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesasRectangular6_libre {
             get {
                 object obj = ResourceManager.GetObject("MesasRectangular6_libre", resourceCulture);
@@ -618,7 +583,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesasRectangular6Roja {
             get {
                 object obj = ResourceManager.GetObject("MesasRectangular6Roja", resourceCulture);
@@ -629,8 +593,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesasRectangular8_libre {
             get {
                 object obj = ResourceManager.GetObject("MesasRectangular8_libre", resourceCulture);
@@ -651,7 +613,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap MesasRectangular8Roja {
             get {
                 object obj = ResourceManager.GetObject("MesasRectangular8Roja", resourceCulture);
@@ -662,8 +623,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap MesasRectangular8Roja1 {
             get {
                 object obj = ResourceManager.GetObject("MesasRectangular8Roja1", resourceCulture);
@@ -674,7 +633,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap Silla1 {
             get {
                 object obj = ResourceManager.GetObject("Silla1", resourceCulture);
@@ -685,8 +643,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap Silla1_libre {
             get {
                 object obj = ResourceManager.GetObject("Silla1_libre", resourceCulture);
@@ -697,7 +653,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap Silla2 {
             get {
                 object obj = ResourceManager.GetObject("Silla2", resourceCulture);
@@ -708,8 +663,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap Silla2_libre {
             get {
                 object obj = ResourceManager.GetObject("Silla2_libre", resourceCulture);
@@ -720,7 +673,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap Silla3 {
             get {
                 object obj = ResourceManager.GetObject("Silla3", resourceCulture);
@@ -731,8 +683,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap Silla3_libre {
             get {
                 object obj = ResourceManager.GetObject("Silla3_libre", resourceCulture);
@@ -743,7 +693,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap Silla31 {
             get {
                 object obj = ResourceManager.GetObject("Silla31", resourceCulture);
@@ -754,8 +703,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap Silla31_libre {
             get {
                 object obj = ResourceManager.GetObject("Silla31_libre", resourceCulture);
@@ -766,7 +713,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap Silla4 {
             get {
                 object obj = ResourceManager.GetObject("Silla4", resourceCulture);
@@ -777,8 +723,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap Silla4_libre {
             get {
                 object obj = ResourceManager.GetObject("Silla4_libre", resourceCulture);
@@ -789,7 +733,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap Silla5 {
             get {
                 object obj = ResourceManager.GetObject("Silla5", resourceCulture);
@@ -800,8 +743,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap Silla5_libre {
             get {
                 object obj = ResourceManager.GetObject("Silla5_libre", resourceCulture);
@@ -812,7 +753,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap Silla6 {
             get {
                 object obj = ResourceManager.GetObject("Silla6", resourceCulture);
@@ -823,8 +763,6 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         internal static System.Drawing.Bitmap Silla6_libre {
             get {
                 object obj = ResourceManager.GetObject("Silla6_libre", resourceCulture);
@@ -835,15 +773,12 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
         internal static System.Drawing.Bitmap Silla7 {
             get {
                 object obj = ResourceManager.GetObject("Silla7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-<<<<<<< HEAD:Resto.Net/Resto.Net/Properties/Resources.Designer.cs
-=======
         
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -854,6 +789,5 @@ namespace Resto.Net.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Properties/Resources.Designer.cs
     }
 }

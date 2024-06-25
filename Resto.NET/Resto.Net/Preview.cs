@@ -141,7 +141,7 @@ namespace Resto.Net
                     if (elemento.Tipo == nameof(BotonMesa))
                     {
                         TipoDeMesa tipoMesa = Enum.Parse<TipoDeMesa>(elemento.TipoMesa);
-                        BotonMesa botonMesa = new BotonMesa(new Mesa(elemento.Id, tipoMesa, elemento.CantidadSillas));
+                        BotonMesa botonMesa = new BotonMesa(new Mesa(elemento.Id, tipoMesa, elemento.CantidadSillas),0);
                         botonMesa.BackgroundImage = DeterminarImagen(ref botonMesa, elemento.CantidadSillas);
                         botonMesa.FlatStyle = FlatStyle.Flat;
                         botonMesa.FlatAppearance.BorderSize = 0;

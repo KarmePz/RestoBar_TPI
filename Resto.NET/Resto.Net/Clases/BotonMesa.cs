@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Resto.Net/Resto.Net/Clases/BotonMesa.cs
 ﻿using RestoBarClases;
 using System;
 using System.Collections.Generic;
@@ -19,24 +18,10 @@ namespace Resto.Net.Clases
             ClaseMesa = claseMesa;
             this.ContextMenuStrip = new ContextMenuStrip();
             GradoRotacion = gradoRotacion;
-=======
-﻿namespace RestoBarClases
-{
-    internal class BotonMesa : Button
-    {
-        public Mesa ClaseMesa { get; set; }
-        public static int StaticID = 1;
-
-        public BotonMesa(Mesa claseMesa)
-        {
-            ClaseMesa = claseMesa;
-            this.ContextMenuStrip = new ContextMenuStrip();
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Clases/BotonMesa.cs
         }
     }
     internal class BotonSilla : Button
     {
-<<<<<<< HEAD:Resto.Net/Resto.Net/Clases/BotonMesa.cs
         public static int StaticID { get; set; } = 1;
         public Silla claseSilla { get; private set; }
         public int GradoRotacion { get; set; }
@@ -53,14 +38,3 @@ namespace Resto.Net.Clases
 
 
 
-=======
-        public static int StaticID { get; set; } = 0;
-        public Silla claseSilla { get; private set; }
-        public BotonSilla(Silla silla)
-        {
-            claseSilla = silla;
-        }
-    }
-
-}
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Clases/BotonMesa.cs

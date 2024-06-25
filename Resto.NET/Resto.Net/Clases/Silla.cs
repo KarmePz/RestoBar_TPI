@@ -1,6 +1,5 @@
 namespace RestoBarClases
 {
-<<<<<<< HEAD:Resto.Net/Resto.Net/Clases/Silla.cs
     public enum TipoDeSilla
     {
         TipoDefault,
@@ -28,17 +27,5 @@ namespace RestoBarClases
 
         }
 
-=======
-    public class Silla
-    {
-        public bool Ocupada { get; set; }
-        public bool Individual { get; set; }
-
-        public Silla(bool individual)
-        {
-            Ocupada = false;
-            Individual = individual;
-        }
->>>>>>> 1cecd87ccbb839c03e4c27064a164e6844569531:Resto.NET/Resto.Net/Clases/Silla.cs
     }
 }

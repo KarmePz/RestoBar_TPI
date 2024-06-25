@@ -56,11 +56,8 @@
             panelDiseñoLayout = new Panel();
             contextMenuLayoutItem = new ContextMenuStrip(components);
             borrarToolStripMenuItem = new ToolStripMenuItem();
-<<<<<<< HEAD
-=======
             moverToolStripMenuItem = new ToolStripMenuItem();
             verDetallesToolStripMenuItem = new ToolStripMenuItem();
->>>>>>> e15fa9c954c5436fc2274993ad6f36a93ec5dd17
             cambiarColorToolStripMenuItem = new ToolStripMenuItem();
             colorToolStripMenuItem1 = new ToolStripMenuItem();
             nombreToolStripMenuItem = new ToolStripMenuItem();
@@ -430,15 +427,9 @@
             // contextMenuLayoutItem
             // 
             contextMenuLayoutItem.ImageScalingSize = new Size(24, 24);
-<<<<<<< HEAD
-            contextMenuLayoutItem.Items.AddRange(new ToolStripItem[] { borrarToolStripMenuItem, cambiarColorToolStripMenuItem, rotarToolStripMenuItem });
-            contextMenuLayoutItem.Name = "contextMenuLayoutItem";
-            contextMenuLayoutItem.Size = new Size(241, 133);
-=======
             contextMenuLayoutItem.Items.AddRange(new ToolStripItem[] { borrarToolStripMenuItem, moverToolStripMenuItem, verDetallesToolStripMenuItem, cambiarColorToolStripMenuItem, rotarToolStripMenuItem });
             contextMenuLayoutItem.Name = "contextMenuLayoutItem";
             contextMenuLayoutItem.Size = new Size(177, 164);
->>>>>>> e15fa9c954c5436fc2274993ad6f36a93ec5dd17
             // 
             // borrarToolStripMenuItem
             // 
@@ -447,27 +438,15 @@
             borrarToolStripMenuItem.Text = "Borrar";
             borrarToolStripMenuItem.Click += borrarToolStripMenuItem_Click;
             // 
-            // cambiarColorToolStripMenuItem
+            // moverToolStripMenuItem
             // 
-<<<<<<< HEAD
-            cambiarColorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { colorToolStripMenuItem1, nombreToolStripMenuItem });
-            cambiarColorToolStripMenuItem.Name = "cambiarColorToolStripMenuItem";
-            cambiarColorToolStripMenuItem.Size = new Size(240, 32);
-            cambiarColorToolStripMenuItem.Text = "Editar";
-            cambiarColorToolStripMenuItem.DropDownItemClicked += Editar_ItemClicked;
-=======
             moverToolStripMenuItem.Name = "moverToolStripMenuItem";
             moverToolStripMenuItem.Size = new Size(176, 32);
             moverToolStripMenuItem.Text = "Mover";
             moverToolStripMenuItem.Click += moverToolStripMenuItem_Click;
->>>>>>> e15fa9c954c5436fc2274993ad6f36a93ec5dd17
             // 
-            // colorToolStripMenuItem1
+            // verDetallesToolStripMenuItem
             // 
-<<<<<<< HEAD
-            colorToolStripMenuItem1.Name = "colorToolStripMenuItem1";
-            colorToolStripMenuItem1.Size = new Size(270, 34);
-=======
             verDetallesToolStripMenuItem.Name = "verDetallesToolStripMenuItem";
             verDetallesToolStripMenuItem.Size = new Size(176, 32);
             verDetallesToolStripMenuItem.Text = "Ver Detalles";
@@ -485,27 +464,18 @@
             // 
             colorToolStripMenuItem1.Name = "colorToolStripMenuItem1";
             colorToolStripMenuItem1.Size = new Size(180, 34);
->>>>>>> e15fa9c954c5436fc2274993ad6f36a93ec5dd17
             colorToolStripMenuItem1.Text = "Color";
             // 
             // nombreToolStripMenuItem
             // 
             nombreToolStripMenuItem.Name = "nombreToolStripMenuItem";
-<<<<<<< HEAD
-            nombreToolStripMenuItem.Size = new Size(270, 34);
-=======
             nombreToolStripMenuItem.Size = new Size(180, 34);
->>>>>>> e15fa9c954c5436fc2274993ad6f36a93ec5dd17
             nombreToolStripMenuItem.Text = "Nombre";
             // 
             // rotarToolStripMenuItem
             // 
             rotarToolStripMenuItem.Name = "rotarToolStripMenuItem";
-<<<<<<< HEAD
-            rotarToolStripMenuItem.Size = new Size(240, 32);
-=======
             rotarToolStripMenuItem.Size = new Size(176, 32);
->>>>>>> e15fa9c954c5436fc2274993ad6f36a93ec5dd17
             rotarToolStripMenuItem.Text = "Rotar";
             rotarToolStripMenuItem.Click += rotarToolStripMenuItem_Click;
             // 
@@ -561,11 +531,8 @@
         private Button Silla4;
         private ContextMenuStrip contextMenuLayoutItem;
         private ToolStripMenuItem borrarToolStripMenuItem;
-<<<<<<< HEAD
-=======
         private ToolStripMenuItem moverToolStripMenuItem;
         private ToolStripMenuItem verDetallesToolStripMenuItem;
->>>>>>> e15fa9c954c5436fc2274993ad6f36a93ec5dd17
         private ToolStripMenuItem cambiarColorToolStripMenuItem;
         private ToolStripMenuItem rotarToolStripMenuItem;
         private ToolStripMenuItem colorToolStripMenuItem1;

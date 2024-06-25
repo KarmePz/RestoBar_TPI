@@ -12,7 +12,6 @@ using System.Windows.Forms;
 using Resto.Net.Clases;
 using Microsoft.VisualBasic.Logging;
 using System.Diagnostics;
-
 namespace Resto.Net
 {
     public partial class Diseño : Form
@@ -57,15 +56,15 @@ namespace Resto.Net
                 case TipoDeMesa.Redonda:
                     switch (claseMesa.Sillas.Count)
                     {
-                        case 2:
+                        case 0:
                             return Properties.Resources.MesaRedonda2Roja;
-                        case 3:
+                        case 1:
                             return Properties.Resources.MesaRedonda3Roja;
-                        case 4:
+                        case 2:
                             return Properties.Resources.MesaRedonda4Roja;
-                        case 5:
+                        case 3:
                             return Properties.Resources.MesaRedonda5Roja;
-                        case 6:
+                        case 4:
                             return Properties.Resources.MesaRedonda6Roja;
                         default:
                             return Properties.Resources.MesaRedonda8Roja;
@@ -74,7 +73,7 @@ namespace Resto.Net
                 case TipoDeMesa.Cuadrada:
                     switch (claseMesa.Sillas.Count)
                     {
-                        case 4:
+                        case 0:
                             return Properties.Resources.MesaCuadrada4Roja;
                         default:
                             return Properties.Resources.MesaCuadrada8Roja;
@@ -83,11 +82,11 @@ namespace Resto.Net
                 case TipoDeMesa.Rectangular:
                     switch (claseMesa.Sillas.Count)
                     {
-                        case 2:
+                        case 0:
                             return Properties.Resources.MesasRectangular2Roja;
-                        case 4:
+                        case 1:
                             return Properties.Resources.MesasRectangular4Roja;
-                        case 6:
+                        case 2:
                             return Properties.Resources.MesasRectangular6Roja;
                         default:
                             return Properties.Resources.MesasRectangular8Roja;
@@ -95,7 +94,7 @@ namespace Resto.Net
                 case TipoDeMesa.Especiales:
                     switch (claseMesa.Sillas.Count)
                     {
-                        case 10:
+                        case 0:
                             return Properties.Resources.MesaEspecial10RojaCopia;
                         default:
                             return Properties.Resources.MesaEspecial12RojaCopia;
@@ -106,137 +105,51 @@ namespace Resto.Net
             }
         }
         // Generamos un BotonMesa de mesa Redonda
+        private void CrearBotonMesa(TipoDeMesa tipoDeMesa)
+        {
+            SeleccionarCantSillas formCantSill = new(tipoDeMesa);
+            formCantSill.ShowDialog();
+            int cantidadSillas = formCantSill.TipoInt;
+
+            BotonMesa nuevoBotonMesa = new BotonMesa(new Mesa(BotonMesa.StaticID++, tipoDeMesa, cantidadSillas), 0);
+            nuevoBotonMesa.Location = new Point(100, 100);
+
+            nuevoBotonMesa.BackgroundImage = DeterminarImagen(ref nuevoBotonMesa, cantidadSillas);
+            nuevoBotonMesa.Size = nuevoBotonMesa.BackgroundImage.Size;
+            nuevoBotonMesa.BackgroundImageLayout = ImageLayout.Zoom;
+
+            nuevoBotonMesa.FlatStyle = FlatStyle.Flat;
+            nuevoBotonMesa.FlatAppearance.BorderSize = 0;
+            nuevoBotonMesa.ContextMenuStrip = contextMenuLayoutItem;
+            nuevoBotonMesa.BackColor = Color.Transparent;
+
+            nuevoBotonMesa.Tag = nuevoBotonMesa.ClaseMesa.Id;
+            nuevoBotonMesa.Text = "#" + nuevoBotonMesa.Tag.ToString();
+
+            nuevoBotonMesa.MouseDown += Elemento_MouseDown;
+            nuevoBotonMesa.MouseMove += Elemento_MouseMove;
+            nuevoBotonMesa.MouseUp += Elemento_MouseUp;
+
+            panelDiseñoLayout.Controls.Add(nuevoBotonMesa);
+        }
         private void mesaRedondaButton_Click(object sender, EventArgs e)
         {
-            SeleccionarCantSillas formCantSill = new(TipoDeMesa.Redonda);
-            formCantSill.ShowDialog();
-
-            int cantidadSillas = formCantSill.TipoInt;
-
-
-
-            BotonMesa mesaRedondaBoton = new BotonMesa(new Mesa(BotonMesa.StaticID++, TipoDeMesa.Redonda, cantidadSillas));
-            mesaRedondaBoton.Location = new Point(100, 150);
-
-            mesaRedondaBoton.BackgroundImage = DeterminarImagen(ref mesaRedondaBoton, cantidadSillas);
-            mesaRedondaBoton.Size = mesaRedondaBoton.BackgroundImage.Size;
-            mesaRedondaBoton.BackgroundImageLayout = ImageLayout.Zoom;
-
-            mesaRedondaBoton.FlatStyle = FlatStyle.Flat;
-            mesaRedondaBoton.FlatAppearance.BorderSize = 0;
-            mesaRedondaBoton.ContextMenuStrip = contextMenuLayoutItem;
-            //mesaRedondaBoton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-
-            mesaRedondaBoton.BackColor = Color.Transparent;
-            //mesaRedondaBoton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            //mesaRedondaBoton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-
-            mesaRedondaBoton.Tag = mesaRedondaBoton.ClaseMesa.Id;
-            mesaRedondaBoton.Text = "#" + mesaRedondaBoton.Tag.ToString();
-
-
-
-            mesaRedondaBoton.MouseDown += Elemento_MouseDown;
-            mesaRedondaBoton.MouseMove += Elemento_MouseMove;
-            mesaRedondaBoton.MouseUp += Elemento_MouseUp;
-
-            panelDiseñoLayout.Controls.Add(mesaRedondaBoton);
-
+            CrearBotonMesa(TipoDeMesa.Redonda);
         }
 
-        //Generamos un BotonMesa de Mesa mediana
         private void mesaCuadradaButton_Click(object sender, EventArgs e)
         {
-            SeleccionarCantSillas formCantSill = new(TipoDeMesa.Cuadrada);
-            formCantSill.ShowDialog();
-            int cantidadSillas = formCantSill.TipoInt;
-
-            BotonMesa mesaCuadradaBoton = new BotonMesa(new Mesa(BotonMesa.StaticID++, TipoDeMesa.Cuadrada, cantidadSillas));
-            mesaCuadradaBoton.Location = new Point(100, 100);
-
-            mesaCuadradaBoton.BackgroundImage = DeterminarImagen(ref mesaCuadradaBoton, cantidadSillas);
-            mesaCuadradaBoton.Size = mesaCuadradaBoton.BackgroundImage.Size;
-
-            mesaCuadradaBoton.FlatStyle = FlatStyle.Flat;
-            mesaCuadradaBoton.FlatAppearance.BorderSize = 0;
-            mesaCuadradaBoton.ContextMenuStrip = contextMenuLayoutItem;
-            //mesaCuadradaBoton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-
-            mesaCuadradaBoton.BackColor = Color.Transparent;
-            //mesaCuadradaBoton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            //mesaCuadradaBoton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-
-            mesaCuadradaBoton.Tag = mesaCuadradaBoton.ClaseMesa.Id;
-            mesaCuadradaBoton.Text = "#" + mesaCuadradaBoton.Tag.ToString();
-
-            mesaCuadradaBoton.MouseDown += Elemento_MouseDown;
-            mesaCuadradaBoton.MouseMove += Elemento_MouseMove;
-            mesaCuadradaBoton.MouseUp += Elemento_MouseUp;
-
-            panelDiseñoLayout.Controls.Add(mesaCuadradaBoton);
+            CrearBotonMesa(TipoDeMesa.Cuadrada);
         }
 
         private void mesaRectangularButton_Click(object sender, EventArgs e)
         {
-            SeleccionarCantSillas formCantSill = new(TipoDeMesa.Rectangular);
-            formCantSill.ShowDialog();
-            int cantidadSillas = formCantSill.TipoInt;
-
-            BotonMesa mesaRectangularBoton = new BotonMesa(new Mesa(BotonMesa.StaticID++, TipoDeMesa.Rectangular, cantidadSillas));
-            mesaRectangularBoton.Location = new Point(100, 100);
-
-            mesaRectangularBoton.BackgroundImage = DeterminarImagen(ref mesaRectangularBoton, cantidadSillas);
-            mesaRectangularBoton.Size = mesaRectangularBoton.BackgroundImage.Size;
-
-            mesaRectangularBoton.FlatStyle = FlatStyle.Flat;
-            mesaRectangularBoton.FlatAppearance.BorderSize = 0;
-            mesaRectangularBoton.ContextMenuStrip = contextMenuLayoutItem;
-            //mesaRectangularBoton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-
-            mesaRectangularBoton.BackColor = Color.Transparent;
-            //mesaRectangularBoton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            //mesaRectangularBoton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-
-            mesaRectangularBoton.Tag = mesaRectangularBoton.ClaseMesa.Id;
-            mesaRectangularBoton.Text = "#" + mesaRectangularBoton.Tag.ToString();
-
-            mesaRectangularBoton.MouseDown += Elemento_MouseDown;
-            mesaRectangularBoton.MouseMove += Elemento_MouseMove;
-            mesaRectangularBoton.MouseUp += Elemento_MouseUp;
-
-            panelDiseñoLayout.Controls.Add(mesaRectangularBoton);
+            CrearBotonMesa(TipoDeMesa.Rectangular);
         }
 
         private void mesasEspecialesBoton_Click(object sender, EventArgs e)
         {
-            SeleccionarCantSillas formCantSill = new(TipoDeMesa.Especiales);
-            formCantSill.ShowDialog();
-            int cantidadSillas = formCantSill.TipoInt;
-
-            BotonMesa mesaEspecialesBoton = new BotonMesa(new Mesa(BotonMesa.StaticID++, TipoDeMesa.Especiales, cantidadSillas));
-            mesaEspecialesBoton.Location = new Point(100, 100);
-
-            mesaEspecialesBoton.BackgroundImage = DeterminarImagen(ref mesaEspecialesBoton, cantidadSillas);
-            mesaEspecialesBoton.Size = new Size(200, 200);
-            mesaEspecialesBoton.BackgroundImageLayout = ImageLayout.Zoom;
-
-            mesaEspecialesBoton.FlatStyle = FlatStyle.Flat;
-            mesaEspecialesBoton.FlatAppearance.BorderSize = 0;
-            mesaEspecialesBoton.ContextMenuStrip = contextMenuLayoutItem;
-            //mesaEspecialesBoton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-
-            mesaEspecialesBoton.BackColor = Color.Transparent;
-            //mesaEspecialesBoton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            //mesaEspecialesBoton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-
-            mesaEspecialesBoton.Tag = mesaEspecialesBoton.ClaseMesa.Id;
-            mesaEspecialesBoton.Text = "#" + mesaEspecialesBoton.Tag.ToString();
-
-            mesaEspecialesBoton.MouseDown += Elemento_MouseDown;
-            mesaEspecialesBoton.MouseMove += Elemento_MouseMove;
-            mesaEspecialesBoton.MouseUp += Elemento_MouseUp;
-
-            panelDiseñoLayout.Controls.Add(mesaEspecialesBoton);
+            CrearBotonMesa(TipoDeMesa.Especiales);
 
         }
 
@@ -250,8 +163,6 @@ namespace Resto.Net
                 offset = e.Location;
             }
         }
-
-
         private void Elemento_MouseMove(object? sender, MouseEventArgs e)
         {
             if (arrastrando)
@@ -306,6 +217,7 @@ namespace Resto.Net
         private void GuardarEtiquetas()
         {
 
+
             if (!string.IsNullOrEmpty(archivoDiseñoActual))
             {
                 var elementos = new List<ElementoGuardado>();
@@ -321,8 +233,8 @@ namespace Resto.Net
                         Y = control.Location.Y,
                         Ancho = control.Width,
                         Alto = control.Height,
-                        ColorFondo = control.BackColor.ToArgb(),
-                        
+                        ColorFondo = control.BackColor.ToArgb()
+
                     };
 
                     if (control is BotonMesa botonMesa)
@@ -330,11 +242,17 @@ namespace Resto.Net
                         elemento.Id = botonMesa.ClaseMesa.Id;
                         elemento.TipoMesa = botonMesa.ClaseMesa.Tipo.ToString();
                         elemento.CantidadSillas = botonMesa.ClaseMesa.Sillas.Count;
+                        elemento.GradoRotacion = botonMesa.GradoRotacion;
 
                         //añadido recientemente
 
                     }
-                    
+                    if (control is BotonSilla botonSilla)
+                    {
+                        elemento.Id = botonSilla.claseSilla.Id;
+                        elemento.TipoDeSilla = botonSilla.claseSilla.TipoSilla.ToString();
+                        elemento.GradoRotacion = botonSilla.GradoRotacion;
+                    }
 
                     elementos.Add(elemento);
                 }
@@ -367,14 +285,21 @@ namespace Resto.Net
                     if (elemento.Tipo == nameof(BotonMesa))
                     {
                         TipoDeMesa tipoMesa = Enum.Parse<TipoDeMesa>(elemento.TipoMesa);
-                        BotonMesa botonMesa = new BotonMesa(new Mesa(elemento.Id, tipoMesa, elemento.CantidadSillas));
+                        BotonMesa botonMesa = new BotonMesa(new Mesa(elemento.Id, tipoMesa, elemento.CantidadSillas), 0);
                         botonMesa.BackgroundImage = DeterminarImagen(ref botonMesa, elemento.CantidadSillas);
                         botonMesa.FlatStyle = FlatStyle.Flat;
                         botonMesa.FlatAppearance.BorderSize = 0;
                         botonMesa.BackColor = Color.Transparent;
                         botonMesa.BackgroundImageLayout = ImageLayout.Zoom;
                         botonMesa.ContextMenuStrip = contextMenuLayoutItem;
-
+                        botonMesa.GradoRotacion = elemento.GradoRotacion;
+                        for (int i = 0; i < elemento.GradoRotacion; i++)
+                        {
+                            Bitmap imagenOriginal = new Bitmap(botonMesa.BackgroundImage);
+                            Bitmap imagenRotada = RotarImagen(imagenOriginal, 90);
+                            botonMesa.BackgroundImage = imagenRotada;
+                            botonMesa.BackgroundImageLayout = ImageLayout.Zoom;
+                        }
 
                         BotonMesa.StaticID = elemento.Id > BotonMesa.StaticID ? elemento.Id : BotonMesa.StaticID;
                         control = botonMesa;
@@ -382,6 +307,38 @@ namespace Resto.Net
                         control.MouseDown += Elemento_MouseDown;
                         control.MouseMove += Elemento_MouseMove;
                         control.MouseUp += Elemento_MouseUp;
+
+                    }
+                    else if (elemento.Tipo == nameof(BotonSilla))
+                    {
+                        TipoDeSilla tipoSilla = Enum.Parse<TipoDeSilla>(elemento.TipoDeSilla);
+                        BotonSilla botonSilla = new BotonSilla(new Silla(elemento.Id, tipoSilla, false), 0);
+                        botonSilla.BackgroundImage = DeterminarImagenSilla(tipoSilla);
+                        botonSilla.FlatStyle = FlatStyle.Flat;
+                        botonSilla.FlatAppearance.BorderSize = 0;
+                        botonSilla.BackColor = Color.Transparent;
+                        botonSilla.BackgroundImageLayout = ImageLayout.Zoom;
+                        botonSilla.ContextMenuStrip = contextMenuLayoutItem;
+                        botonSilla.GradoRotacion = elemento.GradoRotacion;
+
+                        for (int i = 0; i < elemento.GradoRotacion; i++)
+                        {
+                            Bitmap imagenOriginal = new Bitmap(botonSilla.BackgroundImage);
+                            Bitmap imagenRotada = RotarImagen(imagenOriginal, 90);
+                            botonSilla.BackgroundImage = imagenRotada;
+                            botonSilla.BackgroundImageLayout = ImageLayout.Zoom;
+                        }
+
+                        //BotonSilla.StaticID = elemento.
+                        BotonMesa.StaticID = elemento.Id > BotonSilla.StaticID ? elemento.Id : BotonSilla.StaticID;
+                        control = botonSilla;
+
+                        control.MouseDown += Elemento_MouseDown;
+                        control.MouseMove += Elemento_MouseMove;
+                        control.MouseUp += Elemento_MouseUp;
+
+
+
 
                     }
                     else if (elemento.Tipo == nameof(Panel))
@@ -392,9 +349,7 @@ namespace Resto.Net
                             BackColor = Color.FromArgb(elemento.ColorFondo),
                             Location = new Point(elemento.X, elemento.Y),
                             BorderStyle = BorderStyle.FixedSingle,
-                            ContextMenuStrip = contextMenuLayoutItem,
-                            
-                           
+                            ContextMenuStrip = contextMenuLayoutItem
                         };
 
 
@@ -578,169 +533,85 @@ namespace Resto.Net
         //Modelo silla 1
         private void Silla1_Click(object sender, EventArgs e)
         {
-            BotonSilla silla1Boton = new BotonSilla(new Silla(false));
-            silla1Boton.Location = new Point(100, 100);
-
-            silla1Boton.BackgroundImage = Properties.Resources.Silla1;
-            silla1Boton.Size = silla1Boton.BackgroundImage.Size;
-
-            silla1Boton.FlatStyle = FlatStyle.Flat;
-            silla1Boton.FlatAppearance.BorderSize = 0;
-            silla1Boton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-
-            silla1Boton.BackColor = Color.Transparent;
-            silla1Boton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            silla1Boton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-
-            //silla1Boton.Tag = silla1Boton.ClaseSilla.Id;
-            //silla1Boton.Text = "#" + silla1Boton.Tag.ToString();
-
-            silla1Boton.MouseDown += Elemento_MouseDown;
-            silla1Boton.MouseMove += Elemento_MouseMove;
-            silla1Boton.MouseUp += Elemento_MouseUp;
-
-            panelDiseñoLayout.Controls.Add(silla1Boton);
+            AgregarBotonSilla(TipoDeSilla.Tipo1);
         }
 
         private void Silla2_Click(object sender, EventArgs e)
         {
-            BotonSilla silla2Boton = new BotonSilla(new Silla(false));
-            silla2Boton.Location = new Point(100, 100);
-
-            silla2Boton.BackgroundImage = Properties.Resources.Silla2;
-            silla2Boton.Size = silla2Boton.BackgroundImage.Size;
-
-            silla2Boton.FlatStyle = FlatStyle.Flat;
-            silla2Boton.FlatAppearance.BorderSize = 0;
-            silla2Boton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-
-            silla2Boton.BackColor = Color.Transparent;
-            silla2Boton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            silla2Boton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-
-            //silla1Boton.Tag = silla1Boton.ClaseSilla.Id;
-            //silla1Boton.Text = "#" + silla1Boton.Tag.ToString();
-
-            silla2Boton.MouseDown += Elemento_MouseDown;
-            silla2Boton.MouseMove += Elemento_MouseMove;
-            silla2Boton.MouseUp += Elemento_MouseUp;
-
-            panelDiseñoLayout.Controls.Add(silla2Boton);
+            AgregarBotonSilla(TipoDeSilla.Tipo2);
         }
 
         private void Silla3_Click(object sender, EventArgs e)
         {
-            BotonSilla silla3Boton = new BotonSilla(new Silla(false));
-            silla3Boton.Location = new Point(100, 100);
-
-            silla3Boton.BackgroundImage = Properties.Resources.Silla3;
-            silla3Boton.Size = silla3Boton.BackgroundImage.Size;
-
-            silla3Boton.FlatStyle = FlatStyle.Flat;
-            silla3Boton.FlatAppearance.BorderSize = 0;
-            silla3Boton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-
-            silla3Boton.BackColor = Color.Transparent;
-            silla3Boton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            silla3Boton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-
-            silla3Boton.MouseDown += Elemento_MouseDown;
-            silla3Boton.MouseMove += Elemento_MouseMove;
-            silla3Boton.MouseUp += Elemento_MouseUp;
-
-            panelDiseñoLayout.Controls.Add(silla3Boton);
+            AgregarBotonSilla(TipoDeSilla.Tipo3);
         }
 
         private void Silla4_Click(object sender, EventArgs e)
         {
-            BotonSilla silla4Boton = new BotonSilla(new Silla(false));
-            silla4Boton.Location = new Point(100, 100);
-
-            silla4Boton.BackgroundImage = Properties.Resources.Silla4;
-            silla4Boton.Size = silla4Boton.BackgroundImage.Size;
-
-            silla4Boton.FlatStyle = FlatStyle.Flat;
-            silla4Boton.FlatAppearance.BorderSize = 0;
-            silla4Boton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-
-            silla4Boton.BackColor = Color.Transparent;
-            silla4Boton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            silla4Boton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-
-            silla4Boton.MouseDown += Elemento_MouseDown;
-            silla4Boton.MouseMove += Elemento_MouseMove;
-            silla4Boton.MouseUp += Elemento_MouseUp;
-
-            panelDiseñoLayout.Controls.Add(silla4Boton);
+            AgregarBotonSilla(TipoDeSilla.Tipo4);
         }
 
         private void silla5_Click(object sender, EventArgs e)
         {
-            BotonSilla silla5Boton = new BotonSilla(new Silla(false));
-            silla5Boton.Location = new Point(100, 100);
-
-            silla5Boton.BackgroundImage = Properties.Resources.Silla5;
-            silla5Boton.Size = silla5Boton.BackgroundImage.Size;
-
-            silla5Boton.FlatStyle = FlatStyle.Flat;
-            silla5Boton.FlatAppearance.BorderSize = 0;
-            silla5Boton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-
-            silla5Boton.BackColor = Color.Transparent;
-            silla5Boton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            silla5Boton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-
-            silla5Boton.MouseDown += Elemento_MouseDown;
-            silla5Boton.MouseMove += Elemento_MouseMove;
-            silla5Boton.MouseUp += Elemento_MouseUp;
-
-            panelDiseñoLayout.Controls.Add(silla5Boton);
+            AgregarBotonSilla(TipoDeSilla.Tipo5);
         }
 
         private void silla6_Click(object sender, EventArgs e)
         {
-            BotonSilla silla6Boton = new BotonSilla(new Silla(false));
-            silla6Boton.Location = new Point(100, 100);
-
-            silla6Boton.BackgroundImage = Properties.Resources.Silla6;
-            silla6Boton.Size = silla6Boton.BackgroundImage.Size;
-
-            silla6Boton.FlatStyle = FlatStyle.Flat;
-            silla6Boton.FlatAppearance.BorderSize = 0;
-            silla6Boton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-
-            silla6Boton.BackColor = Color.Transparent;
-            silla6Boton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            silla6Boton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-
-            silla6Boton.MouseDown += Elemento_MouseDown;
-            silla6Boton.MouseMove += Elemento_MouseMove;
-            silla6Boton.MouseUp += Elemento_MouseUp;
-
-            panelDiseñoLayout.Controls.Add(silla6Boton);
+            AgregarBotonSilla(TipoDeSilla.Tipo6);
         }
 
         private void silla7_Click(object sender, EventArgs e)
         {
-            BotonSilla silla7Boton = new BotonSilla(new Silla(false));
-            silla7Boton.Location = new Point(100, 100);
+            AgregarBotonSilla(TipoDeSilla.Tipo7);
+        }
 
-            silla7Boton.BackgroundImage = Properties.Resources.Silla7;
-            silla7Boton.Size = silla7Boton.BackgroundImage.Size;
 
-            silla7Boton.FlatStyle = FlatStyle.Flat;
-            silla7Boton.FlatAppearance.BorderSize = 0;
-            silla7Boton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+        private void AgregarBotonSilla(TipoDeSilla tipoDeSilla)
+        {
+            BotonSilla botonSilla = new BotonSilla(new Silla(BotonSilla.StaticID++, tipoDeSilla, false), 0);
+            botonSilla.Location = new Point(100, 100);
+            botonSilla.BackgroundImage = DeterminarImagenSilla(tipoDeSilla);
+            botonSilla.Size = botonSilla.BackgroundImage.Size;
+            botonSilla.FlatStyle = FlatStyle.Flat;
+            botonSilla.FlatAppearance.BorderSize = 0;
+            botonSilla.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            botonSilla.BackColor = Color.Transparent;
+            botonSilla.ContextMenuStrip = contextMenuLayoutItem;
+            botonSilla.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            botonSilla.FlatAppearance.MouseOverBackColor = Color.Transparent;
 
-            silla7Boton.BackColor = Color.Transparent;
-            silla7Boton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            silla7Boton.FlatAppearance.MouseOverBackColor = Color.Transparent;
 
-            silla7Boton.MouseDown += Elemento_MouseDown;
-            silla7Boton.MouseMove += Elemento_MouseMove;
-            silla7Boton.MouseUp += Elemento_MouseUp;
+            botonSilla.Tag = botonSilla.claseSilla.Id;
+            botonSilla.Text = "#" + botonSilla.Tag.ToString();
 
-            panelDiseñoLayout.Controls.Add(silla7Boton);
+            botonSilla.MouseDown += Elemento_MouseDown;
+            botonSilla.MouseMove += Elemento_MouseMove;
+            botonSilla.MouseUp += Elemento_MouseUp;
+
+            panelDiseñoLayout.Controls.Add(botonSilla);
+        }
+        private Image DeterminarImagenSilla(TipoDeSilla tipoDeSilla)
+        {
+            switch (tipoDeSilla)
+            {
+                case TipoDeSilla.Tipo1:
+                    return Properties.Resources.Silla1;
+                case TipoDeSilla.Tipo2:
+                    return Properties.Resources.Silla2;
+                case TipoDeSilla.Tipo3:
+                    return Properties.Resources.Silla3;
+                case TipoDeSilla.Tipo4:
+                    return Properties.Resources.Silla4;
+                case TipoDeSilla.Tipo5:
+                    return Properties.Resources.Silla5;
+                case TipoDeSilla.Tipo6:
+                    return Properties.Resources.Silla6;
+                case TipoDeSilla.Tipo7:
+                    return Properties.Resources.Silla7;
+                default:
+                    return Properties.Resources.Silla1;
+            }
         }
 
         private void borrarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -757,48 +628,6 @@ namespace Resto.Net
                 panelDiseñoLayout.Controls.Remove(control);
                 control.Dispose(); // Liberar recursos del control eliminado
             }
-
-        }
-
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            ToolStripMenuItem menuItem = sender as ToolStripMenuItem;//obtener el toolstrip del evento
-
-            ContextMenuStrip menu = menuItem.Owner as ContextMenuStrip;//obtener el CMenuStrip asociado
-
-            Control control = menu.SourceControl as Control;
-
-
-            using (ColorDialog colorDialog = new ColorDialog())
-            {
-                if (colorDialog.ShowDialog() == DialogResult.OK)
-                {
-                    control.BackColor = colorDialog.Color;
-                }
-            }
-        }
-
-        private void cambiarColorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ToolStripMenuItem menuItem = sender as ToolStripMenuItem;//obtener el toolstrip del evento
-
-            ContextMenuStrip menu = menuItem.Owner as ContextMenuStrip;//obtener el CMenuStrip asociado
-
-            Control control = menu.SourceControl as Control;
-
-
-            using (ColorDialog colorDialog = new ColorDialog())
-            {
-                if (colorDialog.ShowDialog() == DialogResult.OK)
-                {
-                    control.BackColor = colorDialog.Color;
-                }
-            }
-
-
-        }
-        private void ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
 
         }
 
@@ -858,8 +687,55 @@ namespace Resto.Net
 
         private void rotarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("NO IMPLEMENTADO");
+            if (contextMenuLayoutItem.SourceControl is BotonSilla botonSilla)
+            {
+                Bitmap imagenOriginal = new Bitmap(botonSilla.BackgroundImage);
+                Bitmap imagenRotada = RotarImagen(imagenOriginal, 90);
+                CambiarDimensionesBoton(botonSilla);
+                botonSilla.BackgroundImage = imagenRotada;
+                botonSilla.BackgroundImageLayout = ImageLayout.Zoom;
+                botonSilla.GradoRotacion = botonSilla.GradoRotacion == 3 ? 0 : botonSilla.GradoRotacion + 1;
+            }
+            else if (contextMenuLayoutItem.SourceControl is BotonMesa botonMesa)
+            {
+                Bitmap imagenOriginal = new Bitmap(botonMesa.BackgroundImage);
+                Bitmap imagenRotada = RotarImagen(imagenOriginal, 90);
+                CambiarDimensionesBoton(botonMesa);
+                botonMesa.BackgroundImage = imagenRotada;
+                botonMesa.BackgroundImageLayout = ImageLayout.Zoom;
+                botonMesa.GradoRotacion = botonMesa.GradoRotacion == 3 ? 0 : botonMesa.GradoRotacion + 1;
+
+            }
+        }
+        private Bitmap RotarImagen(Bitmap bmp, float angulo)
+        {
+            // intercambia las dimensiones
+            int nuevaAnchura, nuevaAltura;
+            nuevaAnchura = bmp.Height;
+            nuevaAltura = bmp.Width;
+            Bitmap imagenRotada = new Bitmap(nuevaAnchura, nuevaAltura);
+            using (Graphics g = Graphics.FromImage(imagenRotada))
+            {
+                // Ajusta la calidad de dibujo
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+                // Traslada el gráfico para que el centro de la imagen quede en el centro del lienzo
+                g.TranslateTransform((float)nuevaAnchura / 2, (float)nuevaAltura / 2);
+                g.RotateTransform(angulo);
+                g.TranslateTransform(-(float)bmp.Width / 2, -(float)bmp.Height / 2);
+
+                // Dibuja la imagen rotada
+                g.DrawImage(bmp, new Point(0, 0));
+            }
+            return imagenRotada;
+        }
+        private void CambiarDimensionesBoton(Control boton)
+        {
+            int nuevaAnchura = boton.Height;
+            int nuevaAltura = boton.Width;
+            boton.Size = new Size(nuevaAnchura, nuevaAltura);
         }
     }
 }
-
