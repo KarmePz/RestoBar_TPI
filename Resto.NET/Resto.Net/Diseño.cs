@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Resto.Net.Clases;
 using Microsoft.VisualBasic.Logging;
 using System.Diagnostics;
+
 namespace Resto.Net
 {
     public partial class Diseño : Form
@@ -56,15 +57,15 @@ namespace Resto.Net
                 case TipoDeMesa.Redonda:
                     switch (claseMesa.Sillas.Count)
                     {
-                        case 0:
-                            return Properties.Resources.MesaRedonda2Roja;
-                        case 1:
-                            return Properties.Resources.MesaRedonda3Roja;
                         case 2:
-                            return Properties.Resources.MesaRedonda4Roja;
+                            return Properties.Resources.MesaRedonda2Roja;
                         case 3:
-                            return Properties.Resources.MesaRedonda5Roja;
+                            return Properties.Resources.MesaRedonda3Roja;
                         case 4:
+                            return Properties.Resources.MesaRedonda4Roja;
+                        case 5:
+                            return Properties.Resources.MesaRedonda5Roja;
+                        case 6:
                             return Properties.Resources.MesaRedonda6Roja;
                         default:
                             return Properties.Resources.MesaRedonda8Roja;
@@ -73,7 +74,7 @@ namespace Resto.Net
                 case TipoDeMesa.Cuadrada:
                     switch (claseMesa.Sillas.Count)
                     {
-                        case 0:
+                        case 4:
                             return Properties.Resources.MesaCuadrada4Roja;
                         default:
                             return Properties.Resources.MesaCuadrada8Roja;
@@ -82,11 +83,11 @@ namespace Resto.Net
                 case TipoDeMesa.Rectangular:
                     switch (claseMesa.Sillas.Count)
                     {
-                        case 0:
-                            return Properties.Resources.MesasRectangular2Roja;
-                        case 1:
-                            return Properties.Resources.MesasRectangular4Roja;
                         case 2:
+                            return Properties.Resources.MesasRectangular2Roja;
+                        case 4:
+                            return Properties.Resources.MesasRectangular4Roja;
+                        case 6:
                             return Properties.Resources.MesasRectangular6Roja;
                         default:
                             return Properties.Resources.MesasRectangular8Roja;
@@ -94,7 +95,7 @@ namespace Resto.Net
                 case TipoDeMesa.Especiales:
                     switch (claseMesa.Sillas.Count)
                     {
-                        case 0:
+                        case 10:
                             return Properties.Resources.MesaEspecial10RojaCopia;
                         default:
                             return Properties.Resources.MesaEspecial12RojaCopia;
@@ -123,7 +124,7 @@ namespace Resto.Net
 
             mesaRedondaBoton.FlatStyle = FlatStyle.Flat;
             mesaRedondaBoton.FlatAppearance.BorderSize = 0;
-            mesaRedondaButton.ContextMenuStrip = contextMenuLayoutItem;
+            mesaRedondaBoton.ContextMenuStrip = contextMenuLayoutItem;
             //mesaRedondaBoton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
 
             mesaRedondaBoton.BackColor = Color.Transparent;
@@ -189,7 +190,7 @@ namespace Resto.Net
 
             mesaRectangularBoton.FlatStyle = FlatStyle.Flat;
             mesaRectangularBoton.FlatAppearance.BorderSize = 0;
-            mesaRedondaButton.ContextMenuStrip = contextMenuLayoutItem;
+            mesaRectangularBoton.ContextMenuStrip = contextMenuLayoutItem;
             //mesaRectangularBoton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
 
             mesaRectangularBoton.BackColor = Color.Transparent;
@@ -305,7 +306,6 @@ namespace Resto.Net
         private void GuardarEtiquetas()
         {
 
-
             if (!string.IsNullOrEmpty(archivoDiseñoActual))
             {
                 var elementos = new List<ElementoGuardado>();
@@ -321,7 +321,8 @@ namespace Resto.Net
                         Y = control.Location.Y,
                         Ancho = control.Width,
                         Alto = control.Height,
-                        ColorFondo = control.BackColor.ToArgb()
+                        ColorFondo = control.BackColor.ToArgb(),
+                        
                     };
 
                     if (control is BotonMesa botonMesa)
@@ -333,6 +334,7 @@ namespace Resto.Net
                         //añadido recientemente
 
                     }
+                    
 
                     elementos.Add(elemento);
                 }
@@ -390,7 +392,9 @@ namespace Resto.Net
                             BackColor = Color.FromArgb(elemento.ColorFondo),
                             Location = new Point(elemento.X, elemento.Y),
                             BorderStyle = BorderStyle.FixedSingle,
-                            ContextMenuStrip = contextMenuLayoutItem
+                            ContextMenuStrip = contextMenuLayoutItem,
+                            
+                           
                         };
 
 

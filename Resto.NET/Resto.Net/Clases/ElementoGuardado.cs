@@ -21,4 +21,10 @@ namespace Resto.Net.Clases
         public int CantidadSillas { get; set; } // Cantidad de sillas (para BotonMesa)
         
     }
+    public class LabelInterno
+    {
+        public string Text { get; set; }
+        public int LocationX { get; set; }
+        public int LocationY { get; set; }
+    }
 }

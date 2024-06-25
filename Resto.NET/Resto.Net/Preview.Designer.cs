@@ -30,9 +30,12 @@
         {
             panelDiseñoLayout = new Panel();
             PanelDeHerramientas = new Panel();
-            Salir = new Button();
+            diseño3Button = new Button();
+            diseño2Button = new Button();
+            diseño1Button = new Button();
             Vision = new Label();
             label1 = new Label();
+            Salir = new Button();
             PanelDeHerramientas.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,6 +53,9 @@
             // 
             PanelDeHerramientas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             PanelDeHerramientas.BackColor = Color.FromArgb(54, 61, 74);
+            PanelDeHerramientas.Controls.Add(diseño3Button);
+            PanelDeHerramientas.Controls.Add(diseño2Button);
+            PanelDeHerramientas.Controls.Add(diseño1Button);
             PanelDeHerramientas.Controls.Add(Vision);
             PanelDeHerramientas.Controls.Add(label1);
             PanelDeHerramientas.Controls.Add(Salir);
@@ -58,22 +64,41 @@
             PanelDeHerramientas.Size = new Size(245, 455);
             PanelDeHerramientas.TabIndex = 3;
             // 
-            // Salir
+            // diseño3Button
             // 
-            Salir.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Salir.BackColor = Color.FromArgb(37, 43, 52);
-            Salir.FlatAppearance.BorderColor = Color.FromArgb(37, 43, 52);
-            Salir.FlatStyle = FlatStyle.Flat;
-            Salir.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Salir.ForeColor = SystemColors.Control;
-            Salir.Location = new Point(0, 398);
-            Salir.Margin = new Padding(3, 4, 3, 4);
-            Salir.Name = "Salir";
-            Salir.Size = new Size(242, 30);
-            Salir.TabIndex = 0;
-            Salir.Text = "Volver";
-            Salir.UseVisualStyleBackColor = false;
-            Salir.Click += Salir_Click;
+            diseño3Button.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            diseño3Button.Location = new Point(3, 118);
+            diseño3Button.Margin = new Padding(3, 2, 3, 2);
+            diseño3Button.Name = "diseño3Button";
+            diseño3Button.Size = new Size(235, 32);
+            diseño3Button.TabIndex = 11;
+            diseño3Button.Text = "Diseño 3";
+            diseño3Button.UseVisualStyleBackColor = true;
+            diseño3Button.Click += diseño3Button_Click;
+            // 
+            // diseño2Button
+            // 
+            diseño2Button.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            diseño2Button.Location = new Point(3, 80);
+            diseño2Button.Margin = new Padding(3, 2, 3, 2);
+            diseño2Button.Name = "diseño2Button";
+            diseño2Button.Size = new Size(235, 32);
+            diseño2Button.TabIndex = 10;
+            diseño2Button.Text = "Diseño 2";
+            diseño2Button.UseVisualStyleBackColor = true;
+            diseño2Button.Click += diseño2Button_Click;
+            // 
+            // diseño1Button
+            // 
+            diseño1Button.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            diseño1Button.Location = new Point(4, 42);
+            diseño1Button.Margin = new Padding(3, 2, 3, 2);
+            diseño1Button.Name = "diseño1Button";
+            diseño1Button.Size = new Size(235, 32);
+            diseño1Button.TabIndex = 9;
+            diseño1Button.Text = "Diseño 1";
+            diseño1Button.UseVisualStyleBackColor = true;
+            diseño1Button.Click += diseño1Button_Click;
             // 
             // Vision
             // 
@@ -103,6 +128,23 @@
             label1.TabIndex = 6;
             label1.Text = "Restó";
             // 
+            // Salir
+            // 
+            Salir.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Salir.BackColor = Color.FromArgb(37, 43, 52);
+            Salir.FlatAppearance.BorderColor = Color.FromArgb(37, 43, 52);
+            Salir.FlatStyle = FlatStyle.Flat;
+            Salir.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Salir.ForeColor = SystemColors.Control;
+            Salir.Location = new Point(0, 398);
+            Salir.Margin = new Padding(3, 4, 3, 4);
+            Salir.Name = "Salir";
+            Salir.Size = new Size(242, 30);
+            Salir.TabIndex = 0;
+            Salir.Text = "Volver";
+            Salir.UseVisualStyleBackColor = false;
+            Salir.Click += Salir_Click;
+            // 
             // Preview
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -113,7 +155,7 @@
             Margin = new Padding(3, 4, 3, 4);
             MinimumSize = new Size(877, 509);
             Name = "Preview";
-            Text = "Previuw";
+            Text = "Preview";
             FormClosing += Preview_FormClosing;
             PanelDeHerramientas.ResumeLayout(false);
             PanelDeHerramientas.PerformLayout();
@@ -127,5 +169,8 @@
         private Button Salir;
         private Label Vision;
         private Label label1;
+        private Button diseño3Button;
+        private Button diseño2Button;
+        private Button diseño1Button;
     }
 }

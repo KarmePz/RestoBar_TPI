@@ -51,7 +51,7 @@ namespace Resto.Net
             }
             else
             {
-                TipoInt = comboBoxSelecCant.SelectedIndex;
+                TipoInt = (int)comboBoxSelecCant.SelectedItem;
                 Close();
             }
         }
