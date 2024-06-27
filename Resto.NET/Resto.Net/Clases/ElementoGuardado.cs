@@ -19,6 +19,7 @@ namespace Resto.Net.Clases
         public int Id { get; set; } // ID del elemento
         public string TipoMesa { get; set; } // Tipo de mesa (para BotonMesa)
         public int CantidadSillas { get; set; } // Cantidad de sillas (para BotonMesa)
-        
+        public string TipoDeSilla { get; set; }
+        public int GradoRotacion { get; set; }
     }
 }

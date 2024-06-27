@@ -1,3 +1,5 @@
+using static Resto.Net.Preview;
+
 namespace RestoBarClases
 {
     public enum TipoDeMesa
@@ -11,11 +13,11 @@ namespace RestoBarClases
     public class Mesa
     {
         public int Id { get; set; }
-        public decimal Consumo { get; set; }
+        public Dictionary<string, decimal> Consumo { get; set; }
         public TipoDeMesa Tipo { get; set; }
         public List<Silla> Sillas { get; set; }
-        public bool Ocupada { get; set; }
-        public bool Reservada { get; set; }
+        public Mozo MozoAsignado { get; set; }
+        public Estado Estado { get; set; }
         public TimeSpan TiempoReserva { get; set; }
 
         public Mesa(int id, TipoDeMesa tipoDeMesa, int cantSillas)
@@ -25,20 +27,19 @@ namespace RestoBarClases
             Sillas = new List<Silla>();
             for (int i = 0; i < cantSillas; i++)
             {
-                Sillas.Add(new Silla(false));
+                Sillas.Add(new Silla(id, TipoDeSilla.TipoDefault, false));
             }
-            Consumo = 0;
-            Ocupada = false;
-            Reservada = false;
+            Consumo = new();
+            
         }
 
         public void OcuparSilla()
         {
             foreach (Silla silla in Sillas)
             {
-                if (!silla.Ocupada)
+                if (silla.Estado == Estado.Libre)
                 {
-                    silla.Ocupada = true;
+                    silla.Estado = Estado.Ocupada;
                     break;
                 }
             }

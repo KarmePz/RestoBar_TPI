@@ -60,5 +60,10 @@ namespace Resto.Net
         {
 
         }
+
+        private void comboBoxSelecCant_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

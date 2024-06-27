@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarNombre_form));
             Enviar_button = new Button();
             label1 = new Label();
             textBox1 = new TextBox();
@@ -68,6 +69,7 @@
             Controls.Add(label1);
             Controls.Add(Enviar_button);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "EditarNombre_form";
             ResumeLayout(false);
             PerformLayout();
