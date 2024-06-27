@@ -8,7 +8,7 @@ namespace Resto.Net
         public InicioForm()
         {
             InitializeComponent();
-
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
         //Llamado de referencia a Diseño Form
         private void Diseño_Click(object sender, EventArgs e)

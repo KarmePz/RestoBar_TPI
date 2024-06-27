@@ -26,6 +26,7 @@ namespace Resto.Net
         public Diseño()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
             this.inicio = (InicioForm)InicioForm.ActiveForm;
 
             panelDiseñoLayout.DragDrop += panelDiseñoLayout_DragDrop;

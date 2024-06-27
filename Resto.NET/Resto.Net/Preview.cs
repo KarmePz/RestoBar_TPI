@@ -35,6 +35,7 @@ namespace Resto.Net
         public Preview()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
             this.inicio = (InicioForm)InicioForm.ActiveForm;
 
         }
