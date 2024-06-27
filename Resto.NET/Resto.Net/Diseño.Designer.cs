@@ -101,10 +101,10 @@
             Salir.FlatStyle = FlatStyle.Flat;
             Salir.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Salir.ForeColor = SystemColors.Control;
-            Salir.Location = new Point(0, 869);
+            Salir.Location = new Point(4, 838);
             Salir.Margin = new Padding(4, 5, 4, 5);
             Salir.Name = "Salir";
-            Salir.Size = new Size(306, 45);
+            Salir.Size = new Size(306, 63);
             Salir.TabIndex = 0;
             Salir.Text = "Volver";
             Salir.UseVisualStyleBackColor = false;
@@ -226,11 +226,11 @@
             ElementosControl.Cursor = Cursors.Hand;
             ElementosControl.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ElementosControl.ItemSize = new Size(85, 35);
-            ElementosControl.Location = new Point(4, 218);
+            ElementosControl.Location = new Point(7, 193);
             ElementosControl.Margin = new Padding(4, 3, 4, 3);
             ElementosControl.Name = "ElementosControl";
             ElementosControl.SelectedIndex = 0;
-            ElementosControl.Size = new Size(297, 588);
+            ElementosControl.Size = new Size(297, 328);
             ElementosControl.TabIndex = 1;
             // 
             // mesas
@@ -246,7 +246,7 @@
             mesas.Margin = new Padding(4, 3, 4, 3);
             mesas.Name = "mesas";
             mesas.Padding = new Padding(4, 3, 4, 3);
-            mesas.Size = new Size(289, 545);
+            mesas.Size = new Size(289, 285);
             mesas.TabIndex = 0;
             mesas.Text = "Mesas";
             // 
@@ -317,7 +317,7 @@
             sillas.Margin = new Padding(4, 3, 4, 3);
             sillas.Name = "sillas";
             sillas.Padding = new Padding(4, 3, 4, 3);
-            sillas.Size = new Size(289, 529);
+            sillas.Size = new Size(289, 545);
             sillas.TabIndex = 1;
             sillas.Text = "Sillas";
             // 
@@ -420,7 +420,7 @@
             estructuras.Margin = new Padding(4, 3, 4, 3);
             estructuras.Name = "estructuras";
             estructuras.Padding = new Padding(4, 3, 4, 3);
-            estructuras.Size = new Size(289, 529);
+            estructuras.Size = new Size(289, 545);
             estructuras.TabIndex = 2;
             estructuras.Text = "Estructuras";
             // 
@@ -453,7 +453,7 @@
             guardarButton.FlatStyle = FlatStyle.Flat;
             guardarButton.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guardarButton.ForeColor = SystemColors.Control;
-            guardarButton.Location = new Point(0, 803);
+            guardarButton.Location = new Point(4, 771);
             guardarButton.Margin = new Padding(4, 5, 4, 5);
             guardarButton.Name = "guardarButton";
             guardarButton.Size = new Size(306, 57);
