@@ -63,7 +63,7 @@
             // 
             nombreConsumision.BackColor = SystemColors.Menu;
             nombreConsumision.Location = new Point(158, 85);
-            nombreConsumision.Margin = new Padding(4, 4, 4, 4);
+            nombreConsumision.Margin = new Padding(4);
             nombreConsumision.Name = "nombreConsumision";
             nombreConsumision.Size = new Size(296, 31);
             nombreConsumision.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             precioConsumision.BackColor = SystemColors.MenuBar;
             precioConsumision.Location = new Point(158, 150);
-            precioConsumision.Margin = new Padding(4, 4, 4, 4);
+            precioConsumision.Margin = new Padding(4);
             precioConsumision.Name = "precioConsumision";
             precioConsumision.Size = new Size(296, 31);
             precioConsumision.TabIndex = 3;
@@ -83,7 +83,7 @@
             agregarConsumisionButton.FlatStyle = FlatStyle.Flat;
             agregarConsumisionButton.ForeColor = SystemColors.Control;
             agregarConsumisionButton.Location = new Point(338, 241);
-            agregarConsumisionButton.Margin = new Padding(4, 4, 4, 4);
+            agregarConsumisionButton.Margin = new Padding(4);
             agregarConsumisionButton.Name = "agregarConsumisionButton";
             agregarConsumisionButton.Size = new Size(118, 36);
             agregarConsumisionButton.TabIndex = 4;
@@ -102,9 +102,10 @@
             Controls.Add(nombreConsumision);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Consumisiones";
-            Text = "Consumisiones";
+            Text = "Resto Vision Consumos";
+            Load += Consumisiones_Load;
             ResumeLayout(false);
             PerformLayout();
         }

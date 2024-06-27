@@ -12,8 +12,8 @@ namespace Resto.Net
 {
     public partial class Consumisiones : Form
     {
-        public string consumision {  get; set; }
-        public decimal precio {  get; set; }
+        public string consumision { get; set; }
+        public decimal precio { get; set; }
         public Consumisiones()
         {
             InitializeComponent();
@@ -21,10 +21,15 @@ namespace Resto.Net
 
         private void agregarConsumisionButton_Click(object sender, EventArgs e)
         {
-            consumision = nombreConsumision.Text;    
+            consumision = nombreConsumision.Text;
             precio = decimal.Parse(precioConsumision.Text);
             DialogResult = DialogResult.OK;
             Close();
+        }
+
+        private void Consumisiones_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

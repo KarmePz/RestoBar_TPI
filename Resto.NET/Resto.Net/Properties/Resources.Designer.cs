@@ -623,6 +623,16 @@ namespace Resto.Net.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Resto_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Resto_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Silla1 {
             get {
                 object obj = ResourceManager.GetObject("Silla1", resourceCulture);

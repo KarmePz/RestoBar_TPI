@@ -602,21 +602,21 @@ namespace Resto.Net
             switch (tipoDeSilla)
             {
                 case TipoDeSilla.Tipo1:
-                    return Properties.Resources.Silla1;
+                    return Properties.Resources.Silla1_libre;
                 case TipoDeSilla.Tipo2:
-                    return Properties.Resources.Silla2;
+                    return Properties.Resources.Silla2_libre;
                 case TipoDeSilla.Tipo3:
-                    return Properties.Resources.Silla3;
+                    return Properties.Resources.Silla3_libre;
                 case TipoDeSilla.Tipo4:
-                    return Properties.Resources.Silla4;
+                    return Properties.Resources.Silla4_libre;
                 case TipoDeSilla.Tipo5:
-                    return Properties.Resources.Silla5;
+                    return Properties.Resources.Silla5_libre;
                 case TipoDeSilla.Tipo6:
-                    return Properties.Resources.Silla6;
+                    return Properties.Resources.Silla6_libre;
                 case TipoDeSilla.Tipo7:
-                    return Properties.Resources.Silla7;
+                    return Properties.Resources.Silla7_libre;
                 default:
-                    return Properties.Resources.Silla1;
+                    return Properties.Resources.Silla1_libre;
             }
         }
 
@@ -742,6 +742,19 @@ namespace Resto.Net
             int nuevaAnchura = boton.Height;
             int nuevaAltura = boton.Width;
             boton.Size = new Size(nuevaAnchura, nuevaAltura);
+        }
+        private void buton_MouseLeave(object sender, EventArgs e)//al salir el mouse
+        {
+            Button btn = (Button)sender;
+            btn.FlatAppearance.BorderColor = Color.FromArgb(255, 37, 43, 52);
+            Cursor = Cursors.Default;
+        }
+
+        private void buton_MouseEnter(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.FlatAppearance.BorderColor = Color.FromArgb(255, 113, 188, 252);
+            Cursor = Cursors.Hand;
         }
     }
 }
